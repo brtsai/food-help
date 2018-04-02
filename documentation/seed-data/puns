@@ -1,0 +1,36 @@
+{
+  usernames: [
+    "reeses_with_a_spoon",
+    "michael_smore",
+    "susan_saran_wrap"
+    "david_mackerel_smores",
+    "tofugeki_no_soma",
+    "dango_aoki",
+    "alice_snackiri",
+    "nikumi",
+    "naruto",
+    "oroweatmaru"
+    "soup_nade",
+    "broccoli_obama",
+    "vegeta_ble",
+    "yamcha",
+    "us_beer",
+    "swim_trunks",
+    "kahlua_zoldyck",
+    "gin_and_tonic_sakata",
+    "hymn_tuna_kenshin",
+    "chè_guevarra",
+    "anyoung_banh_xeo"
+  ],
+  businesses: [
+    "BREWERUNKNOWN'S GASTROPUB",
+    "World of Wheatcraft",
+    "Mein Craft; Brats and Beers",
+  ],
+  menuItems: [
+    "Combo #1, Porks and Hummus"
+    "Combo #2, Chow-Mein of Chaos",
+    "Dessert Special #3, The Frozen Cone",
+    "Tom Foodmancy's Rainbow 6 Fish Roll"
+  ]
+}
