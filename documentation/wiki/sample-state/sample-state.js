@@ -5,6 +5,8 @@
       name: "BREWERUNKNOWN'S GASTROPUB",
       latitude: 25.9861,
       longitude: 80.3036,
+      reviews: 3236027,
+      rating: 5.0,
     },
     users: {
       1: {
@@ -13,13 +15,15 @@
         imageUrl: "https://commons.wikimedia.org/wiki/File:Shokugeki_no_SOMA.jpg",
         city: "Tokyo",
         state: "Tokyo",
+        reviews: 88,
       },
       20062018: {
         id: 20062018,
         username: "reeses_with_a_spoon",
         imageUrl: "https://cdn.pixabay.com/photo/2017/04/04/17/03/chocolate-2202109_1280.jpg",
         city: "New Orleans",
-        state: "Louisiana"
+        state: "Louisiana",
+        reviews: 2,
       }
     },
     reviews: {
@@ -45,6 +49,7 @@
     imageUrl: "https://en.wikipedia.org/wiki/File:Rickroll%27D.jpg", 
     city: "Salt Lake City",
     state: "Utah",
+    reviews: 4,
   },
   ui: {
     loading: true/false
