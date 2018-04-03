@@ -1,5 +1,3 @@
 json.errors do
-  json.array! errors do |error|
-    error
-  end
+  json.array! errors 
 end
