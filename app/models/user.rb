@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   validates :password_digest, :profile_picture_url, :city, :state, presence: true
   validates :username, presence: true, uniqueness: true
-  validates :password, presence: true, length: { minimum: 6, allow_nil: true }
+  validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
   validates :session_token, presence: true, uniqueness: true
 
   attr_reader :password
