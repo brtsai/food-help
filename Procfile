@@ -1,2 +1,1 @@
-web: bundle exec rails server
-worker: npm run start
+web: bundle exec rails server; npm run start
