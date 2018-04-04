@@ -5,7 +5,7 @@ class Greeting extends React.Component {
   
   logout() {
     return e => {
-      this.props.logout();
+      this.props.logout().then(() => this.props.history.push('login'));
     };
   }
 

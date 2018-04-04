@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
+import ErrorsBannerContainer from './errors_banner_container';
 
 class SessionPage extends React.Component {
   
@@ -80,26 +81,29 @@ class SessionPage extends React.Component {
 
   render () {
     return (
-      <div className="session-page-content">
-        <section className="session-form">
-          {
-            this.topSection()
-          }
-          <fieldset className="hr-line">
-            <legend>OR</legend>
-          </fieldset>
-          {
-            this.sessionForm()
-          }
-          {
-            this.subtleLink()
-          }
-        </section>
+      <section className="session-page-content">
+        <ErrorsBannerContainer />
+        <section className="session-page-main-content">
+          <section className="session-form">
+            {
+              this.topSection()
+            }
+            <fieldset className="hr-line">
+              <legend>OR</legend>
+            </fieldset>
+            {
+              this.sessionForm()
+            }
+            {
+              this.subtleLink()
+            }
+          </section>
 
-        <section className="session-page-art-section">
-          <img className="session-page-art-img" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png" />
+          <section className="session-page-art-section">
+            <img className="session-page-art-img" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png" />
+          </section>
         </section>
-      </div>
+      </section>
     );
   }
 }
