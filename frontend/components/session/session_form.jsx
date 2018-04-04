@@ -31,8 +31,8 @@ class SessionForm extends React.Component {
     const submitValue = (this.props.formType === 'login') ? "Log In" : "Sign Up";
     const additionalFields = (this.props.formType === 'signup') ? 
       [
-        <input type="text" onChange= { this.update('city') } value= { this.state.city } placeholder="City" />, 
-        <input type="text" onChange= { this.update('state') } value= { this.state.state } placeholder="State" />, 
+        <input key="city" type="text" onChange= { this.update('city') } value= { this.state.city } placeholder="City" />, 
+        <input key="state" type="text" onChange= { this.update('state') } value= { this.state.state } placeholder="State" />, 
       ] 
         : 
       [];
