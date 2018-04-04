@@ -1,5 +1,4 @@
 import React from 'react';
-import { withRouter } from 'react-router'
 
 class Greeting extends React.Component {
   
@@ -42,4 +41,4 @@ class Greeting extends React.Component {
   }
 }
 
-export default withRouter(Greeting);
+export default Greeting;

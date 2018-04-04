@@ -1,18 +1,7 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
 
 class ErrorsBanner extends React.Component {
   
-  componentDidMount() {
-    this.unlisten = this.props.history.listen((location, action) => {
-      this.props.routeChanged();
-    });
-  }
-  
-  componentWillUnmount() {
-    this.unlisten();
-  }
-
   willRender() {
     return Boolean(this.props.errors.length);
   }
@@ -28,4 +17,4 @@ class ErrorsBanner extends React.Component {
   }
 }
 
-export default withRouter(ErrorsBanner);
+export default ErrorsBanner;
