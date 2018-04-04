@@ -9,13 +9,24 @@ import {
 } from 'react-router-dom';
 
 import GreetingContainer from './greeting/greeting_container';
+import SessionPageContainer from './session/session_page_container';
+import HomePage from './homepage/homepage_container';
 
 const App = () => (
   <div>
     <Link to='/'>
       <h1>Welcome to Food Help</h1>
     </Link>
-    <GreetingContainer />
+    <Switch>
+      <Route exact path="/" component= {GreetingContainer} />
+      <Route path="/biz" component= {GreetingContainer} />
+    </Switch>
+
+    <Switch>
+      <Route exact path="/" component= {HomePage} />
+      <Route exact path="/login" component= { SessionPageContainer } />
+      <Route exact path="/signup" component= { SessionPageContainer } />
+    </Switch>
   </div>
 );
 
