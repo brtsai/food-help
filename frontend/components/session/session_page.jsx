@@ -24,12 +24,12 @@ class SessionPage extends React.Component {
     switch(this.props.location.pathname) {
       case '/login':
         header = "Log In to Food Help";
-        subHeader = <h3>New to Food Help? <Link to='signup'>Sign up</Link></h3>;
+        subHeader = <h4>New to Food Help? <Link to='signup'>Sign up</Link></h4>;
         break;
 
       case '/signup':
         header = "Sign Up for Food Help";
-        subHeader = <h3>Connect with great local businesses</h3>;
+        subHeader = <h4>Connect with great local businesses</h4>;
         break;
 
       default:
@@ -42,10 +42,10 @@ class SessionPage extends React.Component {
     
 
     return (
-      <section>
+      <section className="session-form-top">
         { header }
         { subHeader }
-        <button onClick={ this.props.demoLogin }>
+        <button className="demo-login-button" onClick={ this.props.demoLogin }>
           Demo Login
         </button>
       </section>
@@ -80,26 +80,24 @@ class SessionPage extends React.Component {
 
   render () {
     return (
-      <div>
-        <section className="sessionForm">
-          <ul>
-            {
-              this.topSection()
-            }
-            <fieldset className="hr-line">
-              <legend align="center">OR</legend>
-            </fieldset>
-            {
-              this.sessionForm()
-            }
-            {
-              this.subtleLink()
-            }
-          </ul>
+      <div className="session-page-content">
+        <section className="session-form">
+          {
+            this.topSection()
+          }
+          <fieldset className="hr-line">
+            <legend>OR</legend>
+          </fieldset>
+          {
+            this.sessionForm()
+          }
+          {
+            this.subtleLink()
+          }
         </section>
 
-        <section>
-          <img className="session-page-art" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png" />
+        <section className="session-page-art-section">
+          <img className="session-page-art-img" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png" />
         </section>
       </div>
     );

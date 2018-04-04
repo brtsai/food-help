@@ -22,3 +22,10 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+Things I didn't make:
+  * session page
+    * art: Yelp
+    * hr-line css styling: inspiration from Yelp login page hr-line css styling
+  * default profile picture image: Wikimedia commons
+

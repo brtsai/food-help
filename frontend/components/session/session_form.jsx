@@ -37,15 +37,12 @@ class SessionForm extends React.Component {
         : 
       [];
     return (
-      <div>
-        <strong>{ this.props.formType } form</strong>
-        <form onSubmit={ this.handleSubmit }>
-          <input type="text" onChange= { this.update('username') } value= { this.state.username } placeholder="Username" />
-          <input type="password" onChange= { this.update('password') } value= { this.state.password} placeholder="Password" />
-          { additionalFields }
-          <input type="submit" value={ submitValue } />
-        </form>
-      </div>
+      <form onSubmit={ this.handleSubmit }>
+        <input type="text" onChange= { this.update('username') } value= { this.state.username } placeholder="Username" />
+        <input type="password" onChange= { this.update('password') } value= { this.state.password} placeholder="Password" />
+        { additionalFields }
+        <input type="submit" value={ submitValue } />
+      </form>
     );
   }
 }
