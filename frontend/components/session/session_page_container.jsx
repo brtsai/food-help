@@ -8,6 +8,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
+  demoLogin: () => dispatch(login({ username: 'guest', password: 'password' }))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SessionPage);
