@@ -11,6 +11,7 @@ import {
 import GreetingContainer from './greeting/greeting_container';
 import SessionPageContainer from './session/session_page_container';
 import HomePage from './homepage/homepage_container';
+import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 const App = () => (
   <div>
@@ -24,8 +25,8 @@ const App = () => (
 
     <Switch>
       <Route exact path="/" component= {HomePage} />
-      <Route exact path="/login" component= { SessionPageContainer } />
-      <Route exact path="/signup" component= { SessionPageContainer } />
+      <AuthRoute exact path="/login" component= { SessionPageContainer } />
+      <AuthRoute exact path="/signup" component= { SessionPageContainer } />
     </Switch>
   </div>
 );

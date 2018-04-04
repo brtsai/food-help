@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { DEFAULT_PROFILE_PICTURE_URL } from '../../util/defaults';
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -8,6 +10,7 @@ class SessionForm extends React.Component {
       password: '',
       city: '',
       state: '',
+      profile_picture_url: DEFAULT_PROFILE_PICTURE_URL
     }
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -29,7 +32,7 @@ class SessionForm extends React.Component {
     const additionalFields = (this.props.formType === 'signup') ? 
       [
         <input type="text" onChange= { this.update('city') } value= { this.state.city } placeholder="City" />, 
-        <input type="text" onChange= { this.update('state') } value= { this.state.city } placeholder="State" />, 
+        <input type="text" onChange= { this.update('state') } value= { this.state.state } placeholder="State" />, 
       ] 
         : 
       [];

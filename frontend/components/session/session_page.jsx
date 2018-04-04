@@ -23,9 +23,9 @@ class SessionPage extends React.Component {
             <li>
               demo login
             </li>
-            <li>
-              divider
-            </li>
+            <fieldset className="hr-line">
+              <legend align="center">OR</legend>
+            </fieldset>
             <li>
               {
                 this.sessionForm()
@@ -35,7 +35,7 @@ class SessionPage extends React.Component {
         </section>
 
         <section>
-          session page art
+          <img className="session-page-art" src="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/1e82406ff345/signup/signup_illustration.png" />
         </section>
       </div>
     );
