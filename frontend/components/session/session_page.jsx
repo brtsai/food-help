@@ -68,10 +68,10 @@ class SessionPage extends React.Component {
   subtleLink() {
     switch(this.props.location.pathname) {
       case '/login':
-        return <small>New to Food Help? <Link to='/signup'>Sign up</Link></small>;
+        return <small className="subtle-text">New to Food Help? <Link to='/signup'>Sign up</Link></small>;
 
       case '/signup':
-        return <small>Already on Food Help? <Link to='/login'>Log in</Link></small>;
+        return <small className="subtle-text">Already on Food Help? <Link to='/login'>Log in</Link></small>;
 
       default:
         return <strong> neither login nor signup </strong>;

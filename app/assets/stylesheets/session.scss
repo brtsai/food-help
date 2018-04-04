@@ -9,18 +9,21 @@
   align-items: top;
   min-width: 800px;
   height: 100%;
-  padding: 100px 0;
+  padding: 125px;
 }
 
 .session-form {
   min-width: 300px;
   width: 300px;
   min-height: 300px;
-  margin: 0 50px;
+  margin: 0 75px;
+  margin-top: 25px;
 }
 
 .session-page-art-img {
-  margin: 0 50px;
+  margin: 0 75px;
+  height: 342px;
+  width: 382px;
 }
 
 .session-form-top {
@@ -98,11 +101,26 @@
   height: 21px;
   font-size: 16px;
   padding: 12px 18px 13px 18px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px grey;
+  margin-bottom: 15px;
+}
+.session-form form input[type="submit"]:hover {
+  background: #E21319;
 }
 
-
-
-
+.subtle-text {
+  display: block;
+  color: #999;
+  font-size: 12px;
+  text-align: right;
+}
+.subtle-text a {
+  color: #1074B9;
+}
+.subtle-text a:hover {
+  text-decoration: underline;
+}
 
 
 
