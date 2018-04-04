@@ -6,7 +6,6 @@ class Greeting extends React.Component {
   logout() {
     return e => {
       this.props.logout();
-      console.log(this.props);
     };
   }
 
