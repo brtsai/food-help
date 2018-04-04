@@ -18,10 +18,25 @@ class SessionPage extends React.Component {
   render () {
     return (
       <div>
-        session page component
-        {
-          this.sessionForm()
-        }
+        <section className="sessionForm">
+          <ul>
+            <li>
+              demo login
+            </li>
+            <li>
+              divider
+            </li>
+            <li>
+              {
+                this.sessionForm()
+              }
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          session page art
+        </section>
       </div>
     );
   }
