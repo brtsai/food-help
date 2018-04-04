@@ -2,6 +2,8 @@ import * as APIUtil from '../util/session_api_util';
 
 export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const RECEIVE_SESSION_ERRORS = 'RECEIVE_SESSION_ERRORS';
+export const ROUTE_CHANGED = 'ROUTE_CHANGED';
+
 
 export const receiveCurrentUser = user => ({
   type: RECEIVE_CURRENT_USER,
@@ -11,6 +13,10 @@ export const receiveCurrentUser = user => ({
 export const receiveSessionErrors = errors => ({
   type: RECEIVE_SESSION_ERRORS,
   errors
+});
+
+export const registerRouteChanged = () => ({
+  type: ROUTE_CHANGED
 });
 
 export const signup = user => dispatch => (
@@ -31,4 +37,8 @@ export const logout = user => dispatch => (
   APIUtil.logout().then(
     user => (dispatch(receiveCurrentUser(null)))
   )
+);
+
+export const routeChanged = () => dispatch => (
+  dispatch(registerRouteChanged())
 );
