@@ -1,0 +1,32 @@
+.page-footer {
+  background-color: #F5F5F5;
+  border-top: 1px solid #CCCCCC;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-links-title {
+  color: #CF2931;
+  font-weight: 900;
+  font-size: 16px;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.footer-links-list {
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  font-size: 24px;
+  color: #1074B9;
+}
+.footer-links-list-item:hover {
+  text-decoration: underline;
+}
+
+.footer-cityscape-image {
+  width: 660px;
+  height: 140px;
+}

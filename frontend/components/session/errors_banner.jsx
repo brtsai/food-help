@@ -13,7 +13,6 @@ class ErrorsBanner extends React.Component {
   }
   
   render() {
-      console.log(`will render: ${ this.willRender() }`);
       const errorBanner = (
         <figure className="session-errors-banner">
           <ul className="session-errors-banner-errors-list"> 
