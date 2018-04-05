@@ -9,6 +9,7 @@ import {
 } from 'react-router-dom';
 
 import HeaderContainer from './header/header_container';
+import FooterContainer from './footer/footer_container';
 import GreetingContainer from './greeting/greeting_container';
 import SessionPageContainer from './session/session_page_container';
 import HomePage from './homepage/homepage_container';
@@ -43,6 +44,8 @@ class App extends React.Component {
           <AuthRoute exact path="/login" component= { SessionPageContainer } />
           <AuthRoute exact path="/signup" component= { SessionPageContainer } />
         </Switch>
+
+        <FooterContainer />
       </div>
     );
   }
