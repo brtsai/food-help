@@ -2,14 +2,19 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.session-page-content {
+  min-width: 900px;
+  height: 100%;
+  overflow: hidden;
+}
+
 .session-page-main-content {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: top;
-  min-width: 800px;
-  height: 100%;
   padding: 125px;
+
 }
 
 .session-errors-banner {
