@@ -12,6 +12,27 @@
   padding: 125px;
 }
 
+.session-errors-banner {
+  background-color: #FBD6D4;
+  display: flex;
+  justify-content: space-between;
+  align-items: top;
+  padding: 16px 20px;
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 25px;
+  border-radius: 3px;
+}
+
+.session-errors-banner-close {
+  height: 24px;
+  font-size: 16px;
+  color: #999;
+}
+.session-errors-banner-close:hover {
+  color: #928787;
+}
+
 .session-form {
   min-width: 300px;
   width: 300px;

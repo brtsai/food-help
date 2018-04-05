@@ -14,13 +14,18 @@ class ErrorsBanner extends React.Component {
   
   render() {
       console.log(`will render: ${ this.willRender() }`);
+      const errorBanner = (
+        <figure className="session-errors-banner">
+          <ul className="session-errors-banner-errors-list"> 
+            { this.props.errors.map(error => <li>{error}</li>) }
+          </ul>
+          <button className="session-errors-banner-close" onClick={ this.closeBanner() }>✕</button>
+        </figure>
+      );
     return (
-      <figure className="session-errors-banner">
-        <ul> 
-          { this.props.errors.map(error => <li>{error}</li>) }
-        </ul>
-        { this.willRender() ? <button onClick={ this.closeBanner() }>x</button> : "" }
-      </figure>
+        <div>
+          { this.willRender() ? errorBanner : "" }
+        </div>
       );
   }
 }
