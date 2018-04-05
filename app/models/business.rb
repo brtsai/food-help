@@ -8,5 +8,7 @@ class Business < ApplicationRecord
     foreign_key: :owner_id,
     class_name: :User
 
-
+  has_many :business_category_memberships
+  has_many :business_categories,
+    through: :business_category_memberships
 end
