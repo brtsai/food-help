@@ -8,6 +8,7 @@ import {
   HashRouter,
 } from 'react-router-dom';
 
+import HeaderContainer from './header/header_container';
 import GreetingContainer from './greeting/greeting_container';
 import SessionPageContainer from './session/session_page_container';
 import HomePage from './homepage/homepage_container';
@@ -30,9 +31,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Link to='/'>
-          <h1>Welcome to Food Help</h1>
-        </Link>
+        <HeaderContainer />
+        
         <Switch>
           <Route exact path="/" component= {GreetingContainer} />
           <Route path="/biz" component= {GreetingContainer} />
