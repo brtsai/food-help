@@ -1,9 +1,9 @@
-export const ROUTE_CHANGED = 'ROUTE_CHANGED';
+export const RECEIVE_ROUTE_CHANGE = 'RECEIVE_ROUTE_CHANGED';
 
-export const registerRouteChanged = () => ({
-  type: ROUTE_CHANGED
+export const receiveRouteChange = () => ({
+  type: RECEIVE_ROUTE_CHANGE
 });
 
 export const routeChanged = () => dispatch => (
-  dispatch(registerRouteChanged())
+  dispatch(receiveRouteChange())
 );
