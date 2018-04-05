@@ -6,8 +6,18 @@ import configureStore from './store/store.js';
 import { signup, login, logout } from './actions/session_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
+
   const root = document.getElementById('root');
-  const store = configureStore();
+  console.log('current user');
+  console.log(window.currentUser);
+  let store;
+  if (window.currentUser) {
+    const preloadedState = { session: window.currentUser };
+    store = configureStore(preloadedState);
+    delete window.currentUser;
+  } else {
+    store = configureStore();
+  }
   
   
   window.store = store;
