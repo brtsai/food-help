@@ -3,18 +3,25 @@ class Api::BusinessesController < ApplicationController
   def create
     @business = Business.new(business_params)
     if @business.save
-      render "api/business/show"
+      render "api/businesses/show"
     else
       render json: @business.errors.full_messages, status: 422
     end
   end
 
   def show
-
+    @business = Business.find_by_id(params[:id])
+    if @business
+      render :show
+    else
+      render json: ["no such business"], status: 404
+    end
   end
 
+  # TODO: implement index with query filters/search
   def index
-
+    @businesses = Business.first(5)
+    render :index
   end
 
   private
