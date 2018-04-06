@@ -36,6 +36,7 @@ html {
 }
 
 .app {
+  min-width: 900px;
   background: white;
 }
 
