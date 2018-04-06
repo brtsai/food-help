@@ -37,7 +37,6 @@ class App extends React.Component {
         
         <Switch>
           <Route exact path="/" component= {GreetingContainer} />
-          <Route path="/biz" component= {GreetingContainer} />
         </Switch>
 
         <Switch>

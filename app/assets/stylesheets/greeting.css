@@ -1,0 +1,33 @@
+.greeting-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.greeting-nav-button-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+}
+
+.greeting-nav-button-list button {
+  width: 50px;
+}
+
+.greeting-nav-user-profile-button {
+
+}
+
+.greeting-nav-logout-button {
+
+}
+
+.greeting-nav-login-button {
+
+}
+
+.greeting-nav-signup-button {
+
+}
