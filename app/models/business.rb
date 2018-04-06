@@ -11,4 +11,8 @@ class Business < ApplicationRecord
   has_many :business_category_memberships
   has_many :business_categories,
     through: :business_category_memberships
+
+  def has_category?(category)
+    !!self.business_categories.find_by_category(category)
+  end
 end
