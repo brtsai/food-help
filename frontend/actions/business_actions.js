@@ -20,14 +20,22 @@ export const receiveBusinessErrors = errors => ({
 });
 
 export const fetchBusiness = businessId => dispatch => (
-  BusinessAPIUtil.fetchBusiness.then(
+  BusinessAPIUtil.fetchBusiness(businessId).then(
     business => (dispatch(receiveBusiness(business))),
     errors => (dispatch(receiveBusinessErrors(Object.values(errors.responseJSON))))
   )
 );
 
 export const fetchBusinesses = () => dispatch => (
-  BusinessAPIUtil.fetchBusinesses.then(
-    businesses => (dispatch(receiveBusinesses(businesses)))
+  BusinessAPIUtil.fetchBusinesses().then(
+    businesses => (dispatch(receiveBusinesses(businesses))),
+    errors => (dispatch(receiveBusinessErrors(Object.values(errors.responseJSON))))
+  )
+);
+
+export const addBusiness = business => dispatch => (
+  BusinessAPIUtil.addBusiness(business).then(
+    business => (dispatch(receiveBusiness(business))),
+    errors => (dispatch(receiveBusinessErrors(Object.values(errors.responseJSON))))
   )
 );
