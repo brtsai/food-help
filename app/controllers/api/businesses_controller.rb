@@ -2,26 +2,9 @@ class Api::BusinessesController < ApplicationController
   def create
     @business = Business.new(business_params)
     if @business.save
-      
-#      p 'params' 
-#      p params
-#      p ''
-#
-#      p 'params[business][categories]'
-#      p params[:business][:categories]
-#      p ''
-#
-#      p 'business_params'
-#      p business_params
-#      p ''
-#
-#      p 'business_params[categories]'
-#      p business_params[:categories]
-#      p ''
-
-      unless params[:business][:categories].nil?
-        params[:business][:categories].each do |unused, category|
-          cleaned_category = sanitize_business_category(category)
+      unless business_params[:categories].nil?
+        business_params[:categories].each do |category_string|
+          cleaned_category = sanitize_business_category(category_string)
           next if cleaned_category.empty?
           next if @business.has_category?(cleaned_category)
           
@@ -64,6 +47,6 @@ class Api::BusinessesController < ApplicationController
   end
 
   def business_params
-    params.require(:business).permit(:owner_id, :name, :neighbourhood, :address, :city, :state, :latitude, :longitude, :price, categories: [])
+    params.require(:business).permit(:owner_id, :name, :neighbourhood, :address, :city, :state, :latitude, :longitude, :price, :categories => [])
   end
 end
