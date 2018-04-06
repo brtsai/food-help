@@ -36,6 +36,12 @@ class Api::BusinessesController < ApplicationController
 
   # TODO: implement index with query filters/search
   def index
+#    query_hash = {"limit" => 5}
+#    unless query_filter_params.empty?
+#      query_hash.merge! query_filter_params[:query_filters].to_hash
+#    end
+#    
+#    p default_query_hash
     @businesses = Business.first(5)
     render :index
   end
@@ -49,4 +55,8 @@ class Api::BusinessesController < ApplicationController
   def business_params
     params.require(:business).permit(:owner_id, :name, :neighbourhood, :address, :city, :state, :latitude, :longitude, :price, :categories => [])
   end
+
+#  def query_filter_params
+#    params.permit(:query_filters => {})
+#  end
 end
