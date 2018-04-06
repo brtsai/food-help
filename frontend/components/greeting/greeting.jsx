@@ -23,20 +23,20 @@ class Greeting extends React.Component {
   render() {
     const user = this.props.currentUser
     return (
-      <div>
+      <nav className="greeting-nav">
         {
           user ? 
-            <ul>
+            <ul className="greeting-nav-button-list">
               <li>{user.username}</li>
               <li><button onClick={this.logout()}>Logout</button></li>
             </ul>
           : 
-            <ul>
+            <ul className="greeting-nav-button-list">
               <li><button onClick={this.login()}>Login</button></li>
               <li><button onClick={this.signup()}>Signup</button></li>
             </ul>
         }
-      </div>
+      </nav>
     )
   }
 }
