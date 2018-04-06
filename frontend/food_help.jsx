@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom';
 
 import Root from './components/root';
 import configureStore from './store/store.js';
-import * as BusinessAPIUtil from './util/business_api_util'
+import * as BusinessAPIUtil from './util/business_api_util';
+import * as BusinessActions from './actions/business_actions';
+
 document.addEventListener('DOMContentLoaded', () => {
 
   const root = document.getElementById('root');
@@ -17,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   window.BusinessAPIUtil = BusinessAPIUtil;
+  window.BusinessActions = BusinessActions;
   window.store = store;
   window.dispatch = store.dispatch;
 
