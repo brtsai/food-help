@@ -3,10 +3,6 @@ import BusinessInfoSection from './business_info_section';
 import BusinessGraphicInfoSection from './business_graphic_info_section';
 
 class Business extends React.Component {
-  componentDidMount () {
-    this.props.fetchBusiness();
-  }
-  
   businessFetched() {
     return !!this.props.business;
   }
