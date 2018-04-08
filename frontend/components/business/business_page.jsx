@@ -10,15 +10,12 @@ class BusinessPage extends React.Component {
   componentWillReceiveProps(nextProps) {
     if (this.props.business !== undefined) { 
       if (parseInt(nextProps.match.params.businessId) !== this.props.business.id) {
-
-        console.log('fetching business');
         this.props.fetchBusiness(nextProps.match.params.businessId);
       }
     }
   }
 
   render () {
-    console.log('rendering');
     return (
       <section>
         <BusinessContainer business={this.props.business} />

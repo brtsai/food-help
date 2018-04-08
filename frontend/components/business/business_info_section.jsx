@@ -10,7 +10,6 @@ class BusinessInfoSection extends React.Component {
   }
   
   render () {
-    console.log(this.props.business);
     switch(this.props.businessFetched) {
       case true:
         return this.renderBusinessInfo();
