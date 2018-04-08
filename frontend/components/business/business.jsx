@@ -1,39 +1,26 @@
 import React from 'react';
+import BusinessInfoSection from './business_info_section';
+import BusinessGraphicInfoSection from './business_graphic_info_section';
 
 class Business extends React.Component {
   componentDidMount () {
     this.props.fetchBusiness();
   }
-
-  businessInfoSection() {
-    return (
-      <section>
-        Business Info Section
-      </section>
-    );
-  }
-
-  businessGraphicsSection() {
-    return (
-      <section>
-        Business Graphics Section
-      </section>
-    );
+  
+  businessFetched() {
+    return !!this.props.business;
   }
 
   render () {
-    console.log(this.props.business);
+    const businessFetched = this.businessFetched();
     return (
       <div>
         Business show Component
         
-        { 
-          this.businessInfoSection() 
-        }
-        
-        {
-          this.businessGraphicsSection()
-        }
+        <BusinessInfoSection business={this.props.business} businessFetched={ businessFetched } />
+
+        <BusinessGraphicInfoSection business={this.props.business} businessFetched={ businessFetched } />
+
       </div>
     );
   }
