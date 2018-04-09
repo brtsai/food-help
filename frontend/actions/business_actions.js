@@ -39,3 +39,7 @@ export const addBusiness = business => dispatch => (
     errors => (dispatch(receiveBusinessErrors(Object.values(errors.responseJSON))))
   )
 );
+
+export const clearErrors = () => dispatch => (
+  dispatch(receiveBusinessErrors([]))
+);

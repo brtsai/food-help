@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import LoginFormContainer from './login_form_container';
 import SignupFormContainer from './signup_form_container';
-import ErrorsBannerContainer from './errors_banner_container';
+import ErrorsBannerContainer from '../shared/errors/errors_banner_container';
 
 class SessionPage extends React.Component {
   
