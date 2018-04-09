@@ -57,7 +57,6 @@ class AddBusinessForm extends React.Component {
           <input type="number" step="any" onChange= { this.update('longitude') } placeholder="-122.0312"/>
         </label>
 
-
         <label> Price
           <select onChange= { this.update('price') } value={ this.state.price }>
             <option value="1">$</option>
