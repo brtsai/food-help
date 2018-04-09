@@ -66,7 +66,7 @@
 .business-graphic-info-section {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
+  align-items: center;
 }
 
 .business-location-detail {
@@ -93,8 +93,30 @@
   justify-content: space-around;
 }
 
+.image-trifold-list {
+  display: flex;
+  flex-direction: row;
+}
 
+.image-trifold-list li {
+  width: 220px;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.image-trifold-image {
+  width: 220px;
+  height: 220px;
+  box-shadow: 0px 0px 2px 0px black;
+  transition: width 0.5s, height 0.5s;
+}
+.image-trifold-image:hover {
+  width: 250px;
+  height: 250px;
+  z-index: 2;
+}
 
 
 
