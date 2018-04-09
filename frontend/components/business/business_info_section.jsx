@@ -9,6 +9,10 @@ class BusinessInfoSection extends React.Component {
     return dollars;
   }
 
+  renderBulletSeparator() {
+    return <figure className="bullet-separator">•</figure>;
+  }
+
   renderCategories() {
     let categories = [];
     for (let i = 0; i < this.props.business.businessCategories.length; i++) {
@@ -23,8 +27,7 @@ class BusinessInfoSection extends React.Component {
       </ul>
     );
   }
-
-  
+ 
   render () {
     return (
       <section className="business-info-section">
@@ -32,7 +35,7 @@ class BusinessInfoSection extends React.Component {
         <h4 className="rating-and-review-count">Ratings and Reviews</h4>
         <h4 className="price-and-categories">
           <figure className="business-price">{ this.priceDollarSigns() }</figure>
-          <figure className="bullet-separator">•</figure>
+          { this.props.business.businessCategories.length > 0 ? this.renderBulletSeparator() : "" }
           { this.renderCategories() }
         </h4>
       </section>
