@@ -14,13 +14,12 @@ class AddBusinessForm extends React.Component {
 
   submitForm (e) {
     e.preventDefault();
-    console.log(e);
+    console.log('submitting form');
     this.props.addBusiness(this.state);
   }
 
   update (type) {
     return e => {
-      console.log(e);
       e.preventDefault();
       this.setState({
         [type]: e.target.value

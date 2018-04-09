@@ -16,7 +16,7 @@ class ErrorsBanner extends React.Component {
       const errorBanner = (
         <figure className="session-errors-banner">
           <ul className="session-errors-banner-errors-list"> 
-            { this.props.errors.map(error => <li>{error}</li>) }
+            { this.props.errors.map(error => <li key={error}>{error}</li>) }
           </ul>
           <button className="session-errors-banner-close" onClick={ this.closeBanner() }>✕</button>
         </figure>
