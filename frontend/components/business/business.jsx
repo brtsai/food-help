@@ -9,11 +9,13 @@ class Business extends React.Component {
 
   renderBusinessInfo () {
     return (
-      <section className="business-show-component">
-        <BusinessInfoSection business={this.props.business} />
+      <section className="business-show-container">
+        <section className="business-show-component">
+          <BusinessInfoSection business={this.props.business} />
 
-        <BusinessGraphicInfoSection business={this.props.business} />
+          <BusinessGraphicInfoSection business={this.props.business} />
 
+        </section>
       </section>
     );
   }
