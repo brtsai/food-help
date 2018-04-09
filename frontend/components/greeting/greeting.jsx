@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Greeting extends React.Component {
 
@@ -31,20 +32,26 @@ class Greeting extends React.Component {
   render() {
     const user = this.props.currentUser
     return (
-      <nav className="greeting-nav">
-        {
-          user ? 
-            <ul className="greeting-nav-button-list">
-              <li><button className="greeting-nav-user-profile-button" onClick={this.user()}>{user.username}</button></li>
-              <li><button className="greeting-nav-logout-button" onClick={this.logout()}>Logout</button></li>
-            </ul>
-          : 
-            <ul className="greeting-nav-button-list">
-              <li><button className="greeting-nav-login-button" onClick={this.login()}>Login</button></li>
-              <li><button className="greeting-nav-signup-button" onClick={this.signup()}>Signup</button></li>
-            </ul>
-        }
-      </nav>
+      <section className="greeting-nav-container">
+        <nav className="greeting-nav">
+          <ul className="greeting-nav-links-list">
+            <li><Link to="/biz/newBiz">Add a Business</Link></li>
+          </ul>
+
+          {
+            user ? 
+              <ul className="greeting-nav-button-list">
+                <li><button className="greeting-nav-user-profile-button" onClick={this.user()}>{user.username}</button></li>
+                <li><button className="greeting-nav-logout-button" onClick={this.logout()}>Logout</button></li>
+              </ul>
+            : 
+              <ul className="greeting-nav-button-list">
+                <li><button className="greeting-nav-login-button" onClick={this.login()}>Login</button></li>
+                <li><button className="greeting-nav-signup-button" onClick={this.signup()}>Signup</button></li>
+              </ul>
+          }
+        </nav>
+      </section>
     )
   }
 }

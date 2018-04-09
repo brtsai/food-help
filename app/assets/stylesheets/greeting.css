@@ -1,10 +1,23 @@
-.greeting-nav {
-  width: 100%;
+.greeting-nav-container {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   background: #BB2226;
-  color: white;
   height: 30px;
+}
+
+.greeting-nav {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.greeting-nav-links-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
 }
 
 .greeting-nav-button-list {
