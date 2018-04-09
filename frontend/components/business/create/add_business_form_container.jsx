@@ -1,4 +1,5 @@
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import AddBusinessForm from './add_business_form';
 import { addBusiness } from '../../../actions/business_actions'
@@ -11,4 +12,4 @@ const mapDispatchToProps = dispatch => ({
   addBusiness: business => dispatch(addBusiness(business))
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(AddBusinessForm);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(AddBusinessForm));

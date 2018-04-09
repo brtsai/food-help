@@ -14,8 +14,7 @@ class AddBusinessForm extends React.Component {
 
   submitForm (e) {
     e.preventDefault();
-    console.log('submitting form');
-    this.props.addBusiness(this.state);
+    this.props.addBusiness(this.state).then(success => (this.props.history.push(`/biz/${Object.keys(success.business)[0]}`)));
   }
 
   update (type) {
@@ -42,6 +41,10 @@ class AddBusinessForm extends React.Component {
           <input type="string" onChange= { this.update('name') } placeholder="Mel's Diner" value={this.state.name} />
         </label>
         
+        <label> Neighbourhood
+          <input type="string" onChange= { this.update('neighbourhood') } placeholder="Soma" value={this.state.neighbourhood} />
+        </label>
+        
         <label> Address
           <input type="string" onChange= { this.update('address') } placeholder="123 Main Street" value={this.state.address} />
         </label>
@@ -51,11 +54,7 @@ class AddBusinessForm extends React.Component {
         </label>
 
         <label> State
-          <input type="string" onChange= { this.update('State') } placeholder="CA"/>
-        </label>
-
-        <label> City
-          <input type="string" onChange= { this.update('city') } placeholder="San Francisco"/>
+          <input type="string" onChange= { this.update('state') } placeholder="CA"/>
         </label>
 
         <label> Latitude
