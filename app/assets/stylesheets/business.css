@@ -117,7 +117,7 @@
   width: 220px;
   height: 220px;
   box-shadow: 0px 0px 2px 0px black;
-  transition: width 0.5s, height 0.5s;
+  transition: width 0.25s, height 0.25s;
 }
 .image-trifold-image:hover {
   width: 250px;
