@@ -11,18 +11,20 @@ class AddBusinessPage extends React.Component {
     return (
       <section className="add-business-page">
         <BusinessErrorsBannerContainer />
-        Add Business Page Component
         <section className="add-business-page-container">
-          <section className="add-business-form-column">
-            <AddBusinessFormContainer />
-          </section>
+          <h2 className="add-business-page-title">Add a Business</h2>
+          <section className="add-business-form-container">
+            <section className="add-business-form-column">
+              <AddBusinessFormContainer />
+            </section>
 
-          <section className="add-business-errors-column">
+            <section className="add-business-errors-column">
 
-          </section>
+            </section>
 
-          <section className="add-business-map-column">
+            <section className="add-business-map-column">
 
+            </section>
           </section>
         </section>
       </section>

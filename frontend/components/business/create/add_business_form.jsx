@@ -26,14 +26,6 @@ class AddBusinessForm extends React.Component {
     };
   }
 
-  updatePrice () {
-    return e => {
-      this.setState({
-        price: parseInt(e.target.value)
-      });
-    }
-  }
-
   render () {
     return (
       <form className="add-business-form">
@@ -67,27 +59,14 @@ class AddBusinessForm extends React.Component {
 
 
         <label> Price
-          <label> $
-            <input type="radio" onChange= { this.updatePrice() } name="price" value="1" checked={this.state.price === 1} />
-          </label>
-        
-          <label> $$
-            <input type="radio" onChange= { this.updatePrice() } name="price" value="2" checked={this.state.price === 2} />
-          </label>
-          
-          <label> $$$
-            <input type="radio" onChange= { this.updatePrice() } name="price" value="3" checked={this.state.price === 3} />
-          </label>
-          
-          <label> $$$$
-            <input type="radio" onChange= { this.updatePrice() } name="price" value="4" checked={this.state.price === 4} />
-          </label>
-          
-          <label> $$$$$
-            <input type="radio" onChange= { this.updatePrice() } name="price" value="5" checked={this.state.price === 5} />
-          </label>
+          <select onChange= { this.update('price') } value={ this.state.price }>
+            <option value="1">$</option>
+            <option value="2">$$</option>
+            <option value="3">$$$</option>
+            <option value="4">$$$$</option>
+            <option value="5">$$$$$</option>
+          </select>
         </label>
-
 
         <input type="submit" onClick= { this.submitForm } value="Add Business"/>
       </form>

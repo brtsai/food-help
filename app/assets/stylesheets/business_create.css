@@ -1,1 +1,63 @@
+.add-business-page {
+}
 
+.add-business-page-title {
+  color: #D1262B;
+  font-size: 21px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.add-business-page-container {
+  display: flex;
+  width: 60%;
+  min-width: 1000px;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+@media only screen and (max-width: 1060px) {
+  .add-business-page-container {
+    margin-left: 30px;
+  }
+}
+
+.add-business-form-column {
+  width: 300px;
+}
+
+.add-business-form {
+  display: flex;
+  flex-direction: column;
+}
+.add-business-form label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+}
+.add-business-form label input, select {
+  font-weight: 400;
+  height: 30px;
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding-left: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.add-business-form input[type="submit"] {
+  width: 130px;
+  height: 35px;
+  background-color: #c91400;
+  border: 1px solid #8d0005;
+  border-radius: 3px;
+  
+  color: white;
+  font-weight: 600;
+  text-align: center;
+}
+.add-business-form input[type="submit"]:hover {
+  background-color: #d90007;
+}
