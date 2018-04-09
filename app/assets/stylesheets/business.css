@@ -126,8 +126,15 @@
 }
 
 .business-reviews-section {
-  margin-top: 30px;
   background: white;
+  min-width: 1000px;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  padding-top: 30px;
+  justify-content: space-around;
 }
 
 

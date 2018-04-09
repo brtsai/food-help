@@ -20,7 +20,7 @@ class BusinessPage extends React.Component {
       <section>
         <BusinessContainer business={this.props.business} />
         <section className="business-reviews-section">
-          Other content on a business page
+          Ratings and Reviews Coming Soon!
         </section>
       </section>
     );
