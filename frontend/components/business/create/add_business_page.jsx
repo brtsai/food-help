@@ -10,11 +10,11 @@ class AddBusinessPage extends React.Component {
 
           </section>
 
-          <section> className="add-business-errors-column">
+          <section className="add-business-errors-column">
 
           </section>
 
-          <section> className="add-business-map-column">
+          <section className="add-business-map-column">
 
           </section>
         </section>

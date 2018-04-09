@@ -13,6 +13,7 @@ import FooterContainer from './footer/footer_container';
 import GreetingContainer from './greeting/greeting_container';
 import SessionPageContainer from './session/session_page_container';
 import BusinessPageContainer from './business/show/business_page_container';
+import AddBusinessPageContainer from './business/create/add_business_page_container';
 import HomePage from './homepage/homepage_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
@@ -42,6 +43,7 @@ class App extends React.Component {
 
         <Switch>
           <Route exact path="/" component= {HomePage} />
+          <ProtectedRoute exact path="/biz/newBiz" component= { AddBusinessPageContainer} />
           <Route exact path="/biz/:businessId" component= { BusinessPageContainer } />
           <AuthRoute exact path="/login" component= { SessionPageContainer } />
           <AuthRoute exact path="/signup" component= { SessionPageContainer } />
