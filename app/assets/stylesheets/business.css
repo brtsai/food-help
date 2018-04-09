@@ -1,0 +1,107 @@
+.business-show-component {
+  min-width: 900px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+@media only screen and (max-width:900px) {
+  .business-show-component {
+    margin: 30px;
+  }
+}
+.business-info-section {
+  height: 100px;
+}
+
+.business-name {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.rating-and-review-count {
+  color: #666;
+  margin: 5px 0;
+}
+
+.price-and-categories {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.business-price {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+
+.bullet-separator {
+  display: inline;
+  padding: 0;
+  margin: 0;
+  margin-left: 5px;
+  font-size: 10px;
+  color: #666;
+}
+
+.business-categories {
+  display: flex;
+  flex-direction: row;
+}
+.business-categories li {
+  margin-left: 5px;
+}
+.business-categories li a {
+  color: #0073bb;
+}
+.business-categories li a:hover {
+  text-decoration: underline;
+}
+
+.business-graphic-info-section {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.business-location-detail {
+  width: 300px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.business-static-map-image {
+  border: 1px solid #ccc;
+}
+
+.business-location-info ul li {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.business-location-info ul li i {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

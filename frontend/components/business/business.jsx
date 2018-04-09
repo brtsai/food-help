@@ -7,18 +7,26 @@ class Business extends React.Component {
     return !!this.props.business;
   }
 
-  render () {
-    const businessFetched = this.businessFetched();
+  renderBusinessInfo () {
     return (
-      <div>
-        Business show Component
-        
-        <BusinessInfoSection business={this.props.business} businessFetched={ businessFetched } />
+      <section className="business-show-component">
+        <BusinessInfoSection business={this.props.business} />
 
-        <BusinessGraphicInfoSection business={this.props.business} businessFetched={ businessFetched } />
+        <BusinessGraphicInfoSection business={this.props.business} />
 
-      </div>
+      </section>
     );
+  }
+
+
+  render () {
+    switch (this.businessFetched()) {
+      case true:
+        return this.renderBusinessInfo();
+
+      default:
+        return <section></section>;
+    }
   }
 }
 

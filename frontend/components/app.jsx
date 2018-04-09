@@ -32,11 +32,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="app">
+      <section className="app">
         <HeaderContainer />
         
         <Switch>
           <Route exact path="/" component= {GreetingContainer} />
+          <Route path="/biz" component= {GreetingContainer} />
         </Switch>
 
         <Switch>
@@ -47,7 +48,7 @@ class App extends React.Component {
         </Switch>
 
         <FooterContainer />
-      </div>
+      </section>
     );
   }
 }

@@ -2,6 +2,9 @@
   width: 100%;
   display: flex;
   justify-content: flex-end;
+  background: #BB2226;
+  color: white;
+  height: 30px;
 }
 
 .greeting-nav-button-list {
