@@ -1,0 +1,24 @@
+/api/search?params
+GET
+
+pass parameters by url
+e.g. search for tacos:
+$.ajax({
+  url: "/api/search?search_term
+})
+
+Note
+* Rails' server will automatically decode uri strings and params passed through URI query strings
+  * "/api/businesses?search%20term=taco+bell" => Parameters: {"search term"=>"taco bell"}
+
+Javascript
+* Use encodeURI
+  * Encodes a string as a URI (https://www.w3schools.com/jsref/jsref_encodeURI.asp)
+  * encodeURI('search_term=taco bell') => "search_term=taco%20bell"
+
+Ruby
+* Use CGI::escape
+  * "Url encode[s] a string" (http://ruby-doc.org/stdlib-1.9.3/libdoc/cgi/rdoc/CGI.html#method-c-escape)
+    i.e. "search_term=taco bell" => "search_term=taco+bell"
+  * Only takes in one string.
+    * Will have to join multiple params with '&'

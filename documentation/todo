@@ -1,5 +1,7 @@
 
-
+add enter/return icon to categories input field to provide
+  visual cue for users that they have to hit enter to add
+  a new category
 
 bonus: Implement different concurrent guest users
 
