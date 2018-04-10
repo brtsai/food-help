@@ -6,7 +6,8 @@ class AddBusinessForm extends React.Component {
 
     this.state = { 
       owner_id: this.props.ownerId,
-      price: 1
+      price: 1,
+      categories: []
     };
 
     this.submitForm = this.submitForm.bind(this);
@@ -24,6 +25,48 @@ class AddBusinessForm extends React.Component {
         [type]: e.target.value
       });
     };
+  }
+
+  removeCategoryAt (index) {
+    return e => {
+      let categories = this.state.categories;
+      categories.splice(index, 1);
+      this.setState({
+        categories: categories
+      });
+    }
+  }
+
+  generateCategoryLi (category, index) {
+    return (
+      <li key={ category + index } >
+        <dt>{category}</dt>
+        <button onClick={ this.removeCategoryAt(index) } >✕</button>
+      </li>
+    );
+  }
+
+  renderCategories() {
+    const categories = this.state.categories.map((category, index) => this.generateCategoryLi(category, index));
+    return (
+      <ul>
+        {categories}
+      </ul>
+    );
+  }
+
+  handleKeyPress () {
+    return e => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        let categories = this.state.categories
+        categories.push(e.target.value);
+        this.setState({
+          categories: categories
+        });
+        e.target.value = "";
+      }
+    }
   }
 
   render () {
@@ -66,7 +109,20 @@ class AddBusinessForm extends React.Component {
             <option value="5">$$$$$</option>
           </select>
         </label>
-
+        
+        <label> Categories
+          
+          {
+            this.renderCategories()
+          }
+          
+          {
+            this.state.categories.length < 3 ? 
+              <input type="string" onKeyPress= { this.handleKeyPress() } placeholder="Add a Category" />
+            :
+              ""
+          }
+        </label>
         <input type="submit" onClick= { this.submitForm } value="Add Business"/>
       </form>
     );
