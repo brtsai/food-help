@@ -39,9 +39,9 @@ class AddBusinessForm extends React.Component {
 
   generateCategoryLi (category, index) {
     return (
-      <li key={ category + index } >
-        <dt>{category}</dt>
-        <button onClick={ this.removeCategoryAt(index) } >✕</button>
+      <li key={ category + index } className="add-business-category-entry" >
+        <dt className="add-business-category-description-term" >{category}</dt>
+        <button onClick={ this.removeCategoryAt(index) } className="add-business-category-remove-button" >✕</button>
       </li>
     );
   }
@@ -49,7 +49,7 @@ class AddBusinessForm extends React.Component {
   renderCategories() {
     const categories = this.state.categories.map((category, index) => this.generateCategoryLi(category, index));
     return (
-      <ul>
+      <ul className="add-business-category-list">
         {categories}
       </ul>
     );
@@ -110,7 +110,8 @@ class AddBusinessForm extends React.Component {
           </select>
         </label>
         
-        <label> Categories
+        <label for="add-category"> Categories
+        </label>
           
           {
             this.renderCategories()
@@ -118,11 +119,11 @@ class AddBusinessForm extends React.Component {
           
           {
             this.state.categories.length < 3 ? 
-              <input type="string" onKeyPress= { this.handleKeyPress() } placeholder="Add a Category" />
+              <input id="add-category" type="string" onKeyPress= { this.handleKeyPress() } placeholder="Add a Category" />
             :
               ""
           }
-        </label>
+
         <input type="submit" onClick= { this.submitForm } value="Add Business"/>
       </form>
     );
