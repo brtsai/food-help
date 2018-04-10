@@ -1,9 +1,27 @@
 .splash-search-component {
   width: 100%;
   height: 600px;
+  background: #eee;
+  background-image: url("ramen.jpg");
+  background-size: 100% auto;
+  background-position-y: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .splash-search-logo {
   width: 240px;
   height: 100px;
+  margin-top: -100px;
+}
+
+.splash-search-form {
+  display: flex;
+  flex-direction: row;
+}
+
+.splash-search-pseudo-form-input-field {
+  background: red;
 }
