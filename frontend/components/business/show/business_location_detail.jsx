@@ -2,9 +2,9 @@ import React from 'react';
 
 class BusinessLocationDetail extends React.Component {
   staticMapImageString() {
-    return "https://maps.googleapis.com/maps/api/staticmap?scale=2&center=" + this.props.business.latitude + "," + this.props.business.longitude + "8&zoom=16&size=286x135&markers=color:red%7C%7C" + this.props.business.latitude + "," + this.props.business.longitude + "8&key=AIzaSyBPzCpqLjnn8cBlaCMdz1v0mlRMtlnW4Ro"
+    return "https://maps.googleapis.com/maps/api/staticmap?scale=2&center=" + this.props.business.latitude + "," + this.props.business.longitude + "&zoom=16&size=286x135&markers=color:red%7C%7C" + this.props.business.latitude + "," + this.props.business.longitude + "&key=AIzaSyBPzCpqLjnn8cBlaCMdz1v0mlRMtlnW4Ro"
   }
-
+  
   render () {
     return (
       <section className="business-location-detail">
