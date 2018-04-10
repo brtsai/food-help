@@ -13,8 +13,6 @@ class SplashSearch extends React.Component {
   
   submitForm(e) {
     e.preventDefault();
-    console.log('commencing search!');
-    console.log(this.props);
     let searchUrl = `/search?search_string=${encodeURI(this.state.search_string)}`;
     this.props.history.push(searchUrl);
   }
@@ -35,15 +33,15 @@ class SplashSearch extends React.Component {
           <Link to="/"><img className="splash-search-logo" src="/assets/logo.png"></img></Link>
         </h1>
         <form className="splash-search-form">
-          <div className="pseudo-form-input-field">
-            <label for="search_string_input">Find</label>
-            <input type="string" id="search_string_input" onChange={this.update('search_string')} placeholder="cafe, ramen, fast food" value={this.state.search_string} />
+          <div className="splash-search-pseudo-form-input-field">
+            <label htmlFor="search-string-input">Find</label>
+            <input type="string" id="search-string-input" onChange={this.update('search_string')} placeholder="cafe, ramen, fast food" value={this.state.search_string} />
           </div>
-          <div className="pseudo-form-input-field">
-            <label for="near_string_input">Near</label>
-            <input type="string" id="near_string_input" onChange={this.update('near_string')} placeholder="San Francisco, CA" value={this.state.near_string} />
+          <div className="splash-search-pseudo-form-input-field">
+            <label htmlFor="near-string-input">Near</label>
+            <input type="string" id="near-string-input" onChange={this.update('near_string')} placeholder="San Francisco, CA" value={this.state.near_string} />
           </div>
-          <button onClick={this.submitForm} ><i className="fa fa-search" aria-hidden="true"></i></button>
+          <button className="splash-search-form-submit-button" onClick={this.submitForm} ><i className="fa fa-search" aria-hidden="true"></i></button>
         </form>
         <ul>
           <li><Link to="/search?search_string=cafe">Cafes</Link></li>
