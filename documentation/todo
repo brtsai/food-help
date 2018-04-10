@@ -4,4 +4,4 @@ add enter/return icon to categories input field to provide
   a new category
 
 bonus: Implement different concurrent guest users
-
+personal bonus: replace sort in search controller with mergesort so sorting is stable

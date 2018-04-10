@@ -15,6 +15,9 @@ Business.where("lower(address) like ?", "%MontGomery%".downcase)
 Business.where("lower(neighbourhood) like ?", "%MontGomery%".downcase)
 * Search using the search term against name, address, and neighbourhood
 
+Category.where("lower(category) like ?", "%Cafe%".downcase)
+* Check for search terms that might also be categories
+
 location: "%"
 * Don't worry about searching by location for now
 
