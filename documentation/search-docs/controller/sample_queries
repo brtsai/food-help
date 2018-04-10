@@ -28,3 +28,8 @@ keywords: "cheap", "affordable", "expensive"
   * Count number of times a business has appeared in each of those search queries
   * Order by number of repeated hits
   * Return top 10 in descending order
+
+## Additional Features ##
+
+* Future
+  * Incorporate reviews
