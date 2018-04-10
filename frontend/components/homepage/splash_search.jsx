@@ -14,6 +14,9 @@ class SplashSearch extends React.Component {
   submitForm(e) {
     e.preventDefault();
     console.log('commencing search!');
+    console.log(this.props);
+    let searchUrl = `/search?search_string=${encodeURI(this.state.search_string)}`;
+    this.props.history.push(searchUrl);
   }
 
   update (type) {
@@ -23,15 +26,6 @@ class SplashSearch extends React.Component {
         [type]: e.target.value
       });
     };
-  }
-
-  handleKeyPress () {
-    return e => {
-      if (e.key === 'Enter') {
-        e.preventDefault();
-        
-      }
-    }
   }
 
   render () {
@@ -49,7 +43,7 @@ class SplashSearch extends React.Component {
             <label for="near_string_input">Near</label>
             <input type="string" id="near_string_input" onChange={this.update('near_string')} placeholder="San Francisco, CA" value={this.state.near_string} />
           </div>
-          <button onClick={this.submitForm} ><i class="fa fa-search" aria-hidden="true"></i></button>
+          <button onClick={this.submitForm} ><i className="fa fa-search" aria-hidden="true"></i></button>
         </form>
         <ul>
           <li><Link to="/search?search_string=cafe">Cafes</Link></li>

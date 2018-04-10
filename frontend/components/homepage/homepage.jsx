@@ -1,12 +1,12 @@
 import React from 'react';
 
-import SplashSearch from './splash_search';
+import SplashSearchContainer from './splash_search_container';
 
 class HomePage extends React.Component {
   render() {
     return (
       <div className="homepage-component">
-        <SplashSearch />
+        <SplashSearchContainer />
       </div>
     );
   }
