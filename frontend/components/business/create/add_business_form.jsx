@@ -15,6 +15,7 @@ class AddBusinessForm extends React.Component {
 
   submitForm (e) {
     e.preventDefault();
+    window.scrollTo(0,0);
     this.props.addBusiness(this.state).then(success => (this.props.history.push(`/biz/${Object.keys(success.business)[0]}`)));
   }
 
