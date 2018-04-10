@@ -13,6 +13,7 @@ class Api::SearchController < ApplicationController
       top_five_business_ids = top_five_in_hash.map { |id, count| id }
 
       unless top_five_business_ids.empty?
+        @business_ids = top_five_business_ids
         @businesses = Business.find_with_ids(top_five_business_ids)
         render "api/search/index"
       else
