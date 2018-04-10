@@ -1,0 +1,30 @@
+## Searching ##
+
+Business.where("lower(address) like ?", "%MontGomery%".downcase)
+* Prepend and Append '%' to the search string so that anything that includes the search term matches
+
+search_string.split(' ')
+* Split by whitespace and search each individual term
+
+'%%'
+* Don't search if the string is only whitecase
+  * Use String#strip
+
+Business.where("lower(name) like ?", "%MontGomery%".downcase)
+Business.where("lower(address) like ?", "%MontGomery%".downcase)
+Business.where("lower(neighbourhood) like ?", "%MontGomery%".downcase)
+* Search using the search term against name, address, and neighbourhood
+
+location: "%"
+* Don't worry about searching by location for now
+
+keywords: "cheap", "affordable", "expensive"
+* Increase priority
+
+## Search Ranking ##
+
+* Point system based on number of hits?
+  * Take each query (search term on name, address, neighbourhood, keywords)
+  * Count number of times a business has appeared in each of those search queries
+  * Order by number of repeated hits
+  * Return top 10 in descending order
