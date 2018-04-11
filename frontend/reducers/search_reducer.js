@@ -2,7 +2,7 @@ import { merge } from 'lodash';
 
 import { RECEIVE_SEARCH_RESULTS } from '../actions/search_actions';
 
-const searchReducer = (state = {}, action) => {
+const searchReducer = (state = [], action) => {
   Object.freeze(state)
 
   switch(action.type) {
@@ -10,7 +10,7 @@ const searchReducer = (state = {}, action) => {
       return action.results.search_results;
 
     default:
-      return state;
+      return [];
   }
 }
 
