@@ -1,6 +1,8 @@
 import React from 'react';
 
 import SearchResultsList from './search_results_list';
+import { clearErrors } from '../../actions/search_actions'
+import { createErrorBannerContainer } from '../shared/errors/errors_banner_container';
 
 class SearchResultsPage extends React.Component {
   
@@ -29,10 +31,11 @@ class SearchResultsPage extends React.Component {
   }
 
   render () {
-
+    const SearchErrorsBannerContainer = createErrorBannerContainer('search', clearErrors);
     console.log(this.props.searchResults);
     return (
       <div>
+        <SearchErrorsBannerContainer />
         Search Results
         {
           this.renderResultsList()
