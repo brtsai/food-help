@@ -22,9 +22,8 @@ class SearchResultsPage extends React.Component {
 
   searchBusinesses() {
     const query = this.parseUrlQueryString();
-    if (query.search_string !== undefined) {
-      this.props.searchBusinesses(query.search_string);
-    }
+    console.log(query);
+    this.props.searchBusinesses(query.search_string);
   }
 
   componentDidMount () {
@@ -49,10 +48,15 @@ class SearchResultsPage extends React.Component {
       <div className="search-results-page">
         <SearchErrorsBannerContainer />
         <section className="search-results-page-content">
-          <h2 className="search-results-page-prologue">
-            <strong>Best { decodeURIComponent(query.search_string) } </strong>
-            near { decodeURIComponent(query.near_string) }
-          </h2>
+          {
+            this.props.searchResults.length > 0 ? 
+              <h2 className="search-results-page-prologue">
+                <strong>Best { decodeURIComponent(query.search_string) } </strong>
+                near { decodeURIComponent(query.near_string) }
+              </h2>
+            :
+              ""
+          }
           {
             this.renderResultsList()
           }
