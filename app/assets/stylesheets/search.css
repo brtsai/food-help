@@ -1,11 +1,18 @@
 .search-results-page-content {
-  width: 60%;
+  width: 600px;
   margin: 0 auto;
   padding: 30px;
 }
 
-.search-results-list {
+.search-results-page-prologue {
+  margin: 15px 0px;
+  font-size: 16px;
+}
+.search-results-page-prologue strong {
+  font-weight: 700;
+}
 
+.search-results-list {
 
 }
 
@@ -23,7 +30,59 @@
   width: 210px;
 }
 
+.search-result-text-container {
+  padding: 0px 20px;
+}
+
 .search-result-item-business-info-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 350px;
+  padding-bottom: 10px;
+  font-size: 15px;
 }
+
+.search-result-item-business-overview-container h4 {
+  font-size: 18px;
+}
+.search-result-item-business-overview-container h4 a {
+  color: #0073bb;
+}
+.search-result-item-business-overview-container h4 a:hover {
+  text-decoration: underline;
+}
+
+.search-result-item-ratings-and-reviews {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.search-result-item-price-and-categories {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.search-result-item-location-container {
+  text-align: right;
+}
+
+.search-result-item-neighbourhood {
+  padding-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
