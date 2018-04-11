@@ -13,12 +13,10 @@ class SearchResultsList extends React.Component {
     
 
     return (
-      <ul>
+      <ul className="search-results-list" >
         {
           this.props.businessOrder.map((id, index) => (
-            <li key= { index + this.props.businesses[id].name + id } >
-              <SearchResultItem index={ index+1 } business={ this.props.businesses[id] } />
-            </li>
+            <SearchResultItem key= { index + this.props.businesses[id].name + id } index={ index+1 } business={ this.props.businesses[id] } />
           ))
         }
       </ul>
@@ -26,16 +24,11 @@ class SearchResultsList extends React.Component {
   }
 
   render () {
-    return (
-      <div>
-        {
-          this.props.businessOrder.length > 0 ?
-            this.renderList()
-          :
-            ""
-        }
-      </div>
-    );
+    if (this.props.businessOrder.length > 0) {
+      return this.renderList()
+    } else {
+      return <div></div>;
+    }
   }
 }
 

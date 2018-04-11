@@ -33,7 +33,7 @@ class SearchResultItem extends React.Component {
 
   render () {
     return (
-      <div className="search-result-item">
+      <li className="search-result-item">
         <Link to={ `/biz/${this.props.business.id}` }><img className="search-result-item-image" src="https://s3-media3.fl.yelpcdn.com/assets/srv0/yelp_styleguide/bed0b2a1d9e2/assets/img/default_avatars/business_60_square.png"></img></Link>
 
         <div className="search-result-text-container">
@@ -67,7 +67,7 @@ class SearchResultItem extends React.Component {
           </div>
 
         </div>
-      </div>
+      </li>
     );
   }
 }
