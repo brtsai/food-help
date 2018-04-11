@@ -15,7 +15,7 @@ class SearchResultsList extends React.Component {
       <div>
         Search results list
         {
-          this.businessOrder.length > 0 ?
+          this.props.businessOrder.length > 0 ?
             this.renderList()
           :
             ""
