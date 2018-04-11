@@ -27,6 +27,8 @@ class SearchResultsPage extends React.Component {
   }
 
   renderResultsList() {
+    const businessOrder = this.props.searchResults;
+    console.log(this.props);
     return <SearchResultsList businesses={{}} businessOrder={[]} />;
   }
 
