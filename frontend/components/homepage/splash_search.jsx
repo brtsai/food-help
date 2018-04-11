@@ -46,9 +46,9 @@ class SplashSearch extends React.Component {
 
         </form>
         <ul className="splash-search-links-ul">
-          <li>☕ <Link to="/search?search_string=cafe">Cafes</Link></li>
-          <li>🍜 <Link to="/search?search_string=ramen">Ramen</Link></li>
-          <li>🍔 <Link to="/search?search_string=fast+food">Fast Food</Link></li>
+          <li>☕ <Link to="/search?search_string=cafe&near_string=Soma,%20San%20Francisco,%20CA">Cafes</Link></li>
+          <li>🍜 <Link to="/search?search_string=ramen&near_string=Soma,%20San%20Francisco,%20CA">Ramen</Link></li>
+          <li>🍔 <Link to="/search?search_string=fast+food&near_string=Soma,%20San%20Francisco,%20CA">Fast Food</Link></li>
         </ul>
       </div>
     );
