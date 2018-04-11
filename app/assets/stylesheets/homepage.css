@@ -56,6 +56,12 @@
   width: 410px;
 }
 
+@media only screen and (max-width: 768px ) {
+  .splash-location-field {
+    margin-left: -1px;
+  }
+}
+
 .splash-location-field label {
   border-left: 1px solid #ccc;
 }
