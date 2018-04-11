@@ -19,11 +19,22 @@ class SearchResultsPage extends React.Component {
     return query;
   }
 
-  componentDidMount () {
+  searchBusinesses() {
     const query = this.parseUrlQueryString();
     if (query.search_string !== undefined) {
       this.props.searchBusinesses(query.search_string);
     }
+  }
+
+  componentDidMount () {
+    this.searchBusinesses();
+    this.unlistenRouteChanges = this.props.history.listen((location, action) =>  {
+      this.searchBusinesses();
+    });
+  }
+
+  componentWillUnmount () {
+    this.unlistenRouteChanges();
   }
 
   renderResultsList() {
