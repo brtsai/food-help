@@ -15,6 +15,7 @@ import SessionPageContainer from './session/session_page_container';
 import BusinessPageContainer from './business/show/business_page_container';
 import AddBusinessPageContainer from './business/create/add_business_page_container';
 import HomePage from './homepage/homepage_container';
+import SearchResultsPageContainer from './search/search_results_page_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 
 
@@ -47,6 +48,7 @@ class App extends React.Component {
           <Route exact path="/biz/:businessId" component= { BusinessPageContainer } />
           <AuthRoute exact path="/login" component= { SessionPageContainer } />
           <AuthRoute exact path="/signup" component= { SessionPageContainer } />
+          <Route path="/search" component= { SearchResultsPageContainer } />
         </Switch>
 
         <FooterContainer />

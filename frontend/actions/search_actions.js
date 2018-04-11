@@ -13,7 +13,7 @@ export const receiveSearchErrors = errors => ({
   errors
 });
 
-export const searchBusinesses = searchString => dispatch (
+export const searchBusinesses = searchString => dispatch => (
   SearchAPIUtil.searchBusinesses(searchString).then(
     results => dispatch(receiveSearchResults(results)),
     errors => dispatch(receiveSearchErrors(errors))

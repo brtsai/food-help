@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Root from './components/root';
 import configureStore from './store/store.js';
-import * as SearchAPIUtil from './util/search_api_util';
+import * as SearchActions from './actions/search_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   
-  window.SearchAPIUtil = SearchAPIUtil;
+  window.SearchActions = SearchActions;
   window.store = store;
   window.dispatch = store.dispatch;
   
