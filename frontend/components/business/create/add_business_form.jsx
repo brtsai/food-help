@@ -125,7 +125,7 @@ class AddBusinessForm extends React.Component {
           
           {
             this.state.categories.length < 3 ? 
-              <input id="add-category" type="string" onKeyPress= { this.handleKeyPress() } placeholder="Add a Category" />
+              <input id="add-category" type="string" onKeyPress= { this.handleKeyPress() } placeholder="(Hit Enter to Add a Category)" />
             :
               ""
           }
