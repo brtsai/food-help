@@ -4,6 +4,7 @@ import SearchResultsList from './search_results_list';
 import { clearErrors } from '../../actions/search_actions'
 import { createErrorBannerContainer } from '../shared/errors/errors_banner_container';
 
+
 class SearchResultsPage extends React.Component {
   
   parseUrlQueryString () {
@@ -38,18 +39,19 @@ class SearchResultsPage extends React.Component {
   }
 
   renderResultsList() {
-    const businessOrder = this.props.searchResults;
-    console.log(this.props.businesses);
-    return <SearchResultsList businesses={{}} businessOrder={[]} />;
+    return <SearchResultsList businesses={this.props.businesses} businessOrder={this.props.searchResults} />;
   }
 
   render () {
     const SearchErrorsBannerContainer = createErrorBannerContainer('search', clearErrors);
-    console.log(this.props.searchResults);
+    const query = this.parseUrlQueryString();
     return (
       <div>
         <SearchErrorsBannerContainer />
-        Search Results
+        <h2>
+          <strong>Best { decodeURIComponent(query.search_string) } </strong>
+          near { decodeURIComponent(query.near_string) }
+        </h2>
         {
           this.renderResultsList()
         }

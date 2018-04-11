@@ -13,7 +13,7 @@ class SplashSearch extends React.Component {
   
   submitForm(e) {
     e.preventDefault();
-    let searchUrl = `/search?search_string=${encodeURI(this.state.search_string)}`;
+    let searchUrl = `/search?search_string=${encodeURI(this.state.search_string)}&near_string=${encodeURI(this.state.near_string)}`;
     this.props.history.push(searchUrl);
   }
 

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SearchResultItem from './search_result_item';
+
 // Note: Needs to receive businessOrder and businesses as props
 class SearchResultsList extends React.Component {
   
@@ -8,16 +10,22 @@ class SearchResultsList extends React.Component {
   }
 
   renderList () {
+    
+
     return (
       <ul>
-        <li>Search Results List</li>
+        {
+          this.props.businessOrder.map((id, index) => (
+            <li key= { index + this.props.businesses[id].name + id } >
+              <SearchResultItem index={ index+1 } business={ this.props.businesses[id] } />
+            </li>
+          ))
+        }
       </ul>
     );
   }
 
   render () {
-    console.log(this.props.businessOrder);
-    console.log(this.props.businesses);
     return (
       <div>
         Search results list
