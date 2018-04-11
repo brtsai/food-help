@@ -42,8 +42,9 @@ class App extends React.Component {
         </Switch>
         
         <Switch>
-          <Route exact path="/" component= {GreetingContainer} />
-          <Route path="/biz" component= {GreetingContainer} />
+          <Route exact path="/login" component= { Empty } />
+          <Route exact path="/signup" component= { Empty } />
+          <Route path="/" component= {GreetingContainer} />
         </Switch>
 
         <Switch>
