@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AddBusinessFormContainer from './add_business_form_container';
-import { clearErrors } from '../../../actions/business_actions'
+import { clearErrors } from '../../../actions/business_actions';
 import { createErrorBannerContainer } from '../../shared/errors/errors_banner_container';
 
 class AddBusinessPage extends React.Component {
