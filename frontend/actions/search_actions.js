@@ -21,5 +21,5 @@ export const searchBusinesses = searchString => dispatch => (
 );
 
 export const clearErrors = () => dispatch => (
-  dispatch(receiveSearchErrors(errors))
+  dispatch(receiveSearchErrors([]))
 );
