@@ -8,6 +8,7 @@ class User < ApplicationRecord
     foreign_key: :owner_id,
     primary_key: :id,
     class_name: :Business
+  has_many :reviews
 
   attr_reader :password
   after_initialize :ensure_session_token!

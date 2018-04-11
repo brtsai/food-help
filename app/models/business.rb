@@ -11,7 +11,7 @@ class Business < ApplicationRecord
   has_many :business_category_memberships
   has_many :business_categories,
     through: :business_category_memberships
-
+  has_many :reviews
   # discard categories passed in by constructor when being built
   # from the controller's business_params
   def categories=(categories)
