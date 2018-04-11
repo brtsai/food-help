@@ -1,5 +1,6 @@
-import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES } from '../actions/business_actions';
 import { merge } from 'lodash';
+
+import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES } from '../actions/business_actions';
 
 const businessReducer = (state = {}, action) => {
   Object.freeze(state)
