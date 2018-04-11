@@ -26,4 +26,9 @@ class Business < ApplicationRecord
     p id_string
     Business.where("id IN (#{id_string})")
   end
+
+  # TODO
+  def self.apply_filters(filter_hash) 
+    
+  end
 end

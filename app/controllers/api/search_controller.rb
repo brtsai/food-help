@@ -1,11 +1,12 @@
 class Api::SearchController < ApplicationController
   def index
     p params[:search_string]
-    @search_string = params[:search_string]
+    search_string = params[:search_string]
     business_hash = Hash.new(0)
-    
-    unless @search_string.nil? || @search_string.empty?
-      @search_string.split(', ').each do |term|
+    #filter_hash = param_filters_to_hash
+
+    unless search_string.nil? || search_string.empty?
+      search_string.split(', ').each do |term|
         record_business_query_results(term, business_hash)
         record_category_query_results(term, business_hash)
       end
@@ -25,6 +26,22 @@ class Api::SearchController < ApplicationController
   end
 
   private
+
+  #TODO
+  def param_filters_to_hash
+    filter_hash = Hash.new
+    
+    price_filter_params = params[:price_filter]
+    unless price_filter_params.nil?
+      price_filter_params.split(",").each do |price_point|
+        next unless [1,2,3,4,5].include?(price_point)
+
+      end
+
+    end
+
+    filter_hash
+  end
 
   def record_business_query_results_by_field(field, term, hash)
     like_field_businesses = Business.where("lower(#{field}) like ?", "%#{term}%".downcase)
