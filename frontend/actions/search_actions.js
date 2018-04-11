@@ -16,7 +16,7 @@ export const receiveSearchErrors = errors => ({
 export const searchBusinesses = searchString => dispatch => (
   SearchAPIUtil.searchBusinesses(searchString).then(
     results => dispatch(receiveSearchResults(results)),
-    errors => dispatch(receiveSearchErrors(errors))
+    errors => dispatch(receiveSearchErrors(Object.values(errors.responseJSON)))
   )
 );
 
