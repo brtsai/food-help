@@ -54,12 +54,7 @@
 .splash-location-field {
   display: flex;
   width: 410px;
-}
-
-@media only screen and (max-width: 768px ) {
-  .splash-location-field {
-    margin-left: -1px;
-  }
+  margin-left: -1px;
 }
 
 .splash-location-field label {
