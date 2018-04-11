@@ -1,5 +1,7 @@
 import React from 'react';
 
+import SearchResultsList from './search_results_list';
+
 class SearchResultsPage extends React.Component {
   
   parseUrlQueryString () {
@@ -22,12 +24,19 @@ class SearchResultsPage extends React.Component {
     }
   }
 
+  renderResultsList() {
+
+  }
+
   render () {
 
     console.log(this.props.searchResults);
     return (
       <div>
         Search Results
+        {
+          this.renderResultsList()
+        }
       </div>
     );
   }
