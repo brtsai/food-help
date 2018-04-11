@@ -1,6 +1,6 @@
 .splash-search-component {
+  height: 540px;
   width: 100%;
-  height: 600px;
   background: #eee;
   background-image: url("ramen.jpg");
   background-size: 100% auto;
@@ -14,8 +14,8 @@
 .splash-search-logo {
   width: 280px;
   height: 100px;
-  margin-top: -125px;
-  margin-bottom: 25px;
+  margin-top: -100px;
+  margin-bottom: 50px;
 }
 
 .splash-search-form {
@@ -25,17 +25,21 @@
 }
 
 .splash-search-pseudo-form-input-field {
-  width: 480px;
-  height: 45px;
+  width: 448px;
+  height: 23px;
   background: white;
   display: flex;
-  align-items: center;
+  padding: 11px;
 }
 
 .splash-search-pseudo-form-input-field label {
-  margin: 0 15px;
+  padding: 0 15px;
+  height: 30px;
   color: #666;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  margin-top: -3px;
 }
 
 .splash-search-field {
@@ -43,11 +47,21 @@
   border-bottom-left-radius: 4px;
 }
 
+.splash-search-field input {
+  width: 400px;
+}
+
 .splash-location-field {
   display: flex;
-  justify-content: space-between;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
+  width: 410px;
+}
+
+.splash-location-field label {
+  border-left: 1px solid #ccc;
+}
+
+.splash-location-field input {
+  width: 340px;
 }
 
 .splash-search-form-submit-button {
@@ -55,6 +69,7 @@
   border-bottom-right-radius: 4px;
   height: 100%;
   width: 65px;
+  height: 45px;
   background-color: #D1262B;
   display: flex;
   justify-content: space-around;
@@ -65,9 +80,18 @@
   background-color: #E21319;
 }
 
+.splash-search-links-ul {
+  display: flex;
+  flex-direction: row;
+}
 
-
-
+.splash-search-links-ul li {
+  color: white;
+  padding: 5px;
+}
+.splash-search-links-ul li a:hover {
+  text-decoration: underline;
+}
 
 
 

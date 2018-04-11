@@ -6,7 +6,7 @@ class SplashSearch extends React.Component {
     super(props);
     this.state = {
       search_string: "",
-      near_string: ""
+      near_string: "Soma, San Francisco, CA"
     };
     this.submitForm = this.submitForm.bind(this);
   }
@@ -36,20 +36,19 @@ class SplashSearch extends React.Component {
           <div className="splash-search-pseudo-form-input-field splash-search-field">
             <label htmlFor="search-string-input">Find</label>
             <input type="string" id="search-string-input" onChange={this.update('search_string')} placeholder="cafe, ramen, fast food" value={this.state.search_string} />
+            
           </div>
           <div className="splash-search-pseudo-form-input-field splash-location-field">
-            <div>
-              <label htmlFor="near-string-input">Near</label>
-              <input type="string" id="near-string-input" onChange={this.update('near_string')} placeholder="San Francisco, CA" value={this.state.near_string} />
-            </div>
-            <button className="splash-search-form-submit-button" onClick={this.submitForm} ><i className="fa fa-search" aria-hidden="true"></i></button>
+            <label htmlFor="near-string-input">Near</label>
+            <input type="string" id="near-string-input" onChange={this.update('near_string')} placeholder="San Francisco, CA" value={this.state.near_string} />
           </div>
+          <button className="splash-search-form-submit-button" onClick={this.submitForm} ><i className="fa fa-search" aria-hidden="true"></i></button>
 
         </form>
-        <ul>
-          <li><Link to="/search?search_string=cafe">Cafes</Link></li>
-          <li><Link to="/search?search_string=ramen">Ramen</Link></li>
-          <li><Link to="/search?search_string=fast+food">Fast Food</Link></li>
+        <ul className="splash-search-links-ul">
+          <li>☕ <Link to="/search?search_string=cafe">Cafes</Link></li>
+          <li>🍜 <Link to="/search?search_string=ramen">Ramen</Link></li>
+          <li>🍔 <Link to="/search?search_string=fast+food">Fast Food</Link></li>
         </ul>
       </div>
     );
