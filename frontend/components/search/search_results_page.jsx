@@ -46,15 +46,17 @@ class SearchResultsPage extends React.Component {
     const SearchErrorsBannerContainer = createErrorBannerContainer('search', clearErrors);
     const query = this.parseUrlQueryString();
     return (
-      <div>
+      <div className="search-results-page">
         <SearchErrorsBannerContainer />
-        <h2>
-          <strong>Best { decodeURIComponent(query.search_string) } </strong>
-          near { decodeURIComponent(query.near_string) }
-        </h2>
-        {
-          this.renderResultsList()
-        }
+        <section className="search-results-page-content">
+          <h2 className="search-results-page-prologue">
+            <strong>Best { decodeURIComponent(query.search_string) } </strong>
+            near { decodeURIComponent(query.near_string) }
+          </h2>
+          {
+            this.renderResultsList()
+          }
+        </section>
       </div>
     );
   }

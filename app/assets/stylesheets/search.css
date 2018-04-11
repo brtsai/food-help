@@ -1,0 +1,29 @@
+.search-results-page-content {
+  width: 60%;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+.search-results-list {
+
+
+}
+
+.search-result-item {
+  display: flex;
+  flex-direction: row;
+  height: 210px;
+  padding: 17px 0px;
+  border-top: 1px solid #e6e6e6;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.search-result-item-image {
+  height: 210px;
+  width: 210px;
+}
+
+.search-result-item-business-info-container {
+  display: flex;
+  flex-direction: row;
+}
