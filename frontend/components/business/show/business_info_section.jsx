@@ -21,7 +21,7 @@ class BusinessInfoSection extends React.Component {
       }
       const name = this.props.business.name
       const category = this.props.business.businessCategories[i];
-      categories.push(<li key={ name + "-" + category }><a href="">{ category }</a></li>);
+      categories.push(<li key={ name + "-" + category }><a href={`/#/search?search_string=${category}&near_string=Soma,%20San%20Francisco,%20CA`}>{ category }</a></li>);
     }
     return (
       <ul className="business-categories">

@@ -5,7 +5,7 @@ class Api::SearchController < ApplicationController
     business_hash = Hash.new(0)
     
     unless @search_string.nil? || @search_string.empty?
-      @search_string.split(' ').each do |term|
+      @search_string.split(', ').each do |term|
         record_business_query_results(term, business_hash)
         record_category_query_results(term, business_hash)
       end
