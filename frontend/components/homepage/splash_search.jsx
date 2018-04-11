@@ -33,15 +33,18 @@ class SplashSearch extends React.Component {
           <Link to="/"><img className="splash-search-logo" src="/assets/logo.png"></img></Link>
         </h1>
         <form className="splash-search-form">
-          <div className="splash-search-pseudo-form-input-field">
+          <div className="splash-search-pseudo-form-input-field splash-search-field">
             <label htmlFor="search-string-input">Find</label>
             <input type="string" id="search-string-input" onChange={this.update('search_string')} placeholder="cafe, ramen, fast food" value={this.state.search_string} />
           </div>
-          <div className="splash-search-pseudo-form-input-field">
-            <label htmlFor="near-string-input">Near</label>
-            <input type="string" id="near-string-input" onChange={this.update('near_string')} placeholder="San Francisco, CA" value={this.state.near_string} />
+          <div className="splash-search-pseudo-form-input-field splash-location-field">
+            <div>
+              <label htmlFor="near-string-input">Near</label>
+              <input type="string" id="near-string-input" onChange={this.update('near_string')} placeholder="San Francisco, CA" value={this.state.near_string} />
+            </div>
+            <button className="splash-search-form-submit-button" onClick={this.submitForm} ><i className="fa fa-search" aria-hidden="true"></i></button>
           </div>
-          <button className="splash-search-form-submit-button" onClick={this.submitForm} ><i className="fa fa-search" aria-hidden="true"></i></button>
+
         </form>
         <ul>
           <li><Link to="/search?search_string=cafe">Cafes</Link></li>
