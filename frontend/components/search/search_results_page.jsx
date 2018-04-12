@@ -29,7 +29,9 @@ class SearchResultsPage extends React.Component {
   componentDidMount () {
     this.searchBusinesses();
     this.unlistenRouteChanges = this.props.history.listen((location, action) =>  {
-      this.searchBusinesses();
+      if(location.pathname === "/search") {
+        this.searchBusinesses();
+      }
     });
   }
 
