@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :users, only: [:create]
     resources :businesses, only: [:index, :show, :create]
     resources :search, only: [:index]
+    resources :reviews, only: [:index, :show, :create, :destroy, :update]
   end
 
   root "static_pages#root"
