@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import Root from './components/root';
 import configureStore from './store/store.js';
-import * as ReviewAPIUtil from './util/review_api_util';
+import * as ReviewActions from './actions/review_actions';
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   
-  window.ReviewAPIUtil = ReviewAPIUtil;
+  window.ReviewActions = ReviewActions;
   window.store = store;
   window.dispatch = store.dispatch;
   
