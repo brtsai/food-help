@@ -12,6 +12,15 @@ class ReviewForm extends React.Component {
 
     this.submitForm = this.submitForm.bind(this);
   }
+  
+  update (type) {
+    return e => {
+      e.preventDefault();
+      this.setState({
+        [type]: e.target.value
+      });
+    };
+  }
 
   submitForm (e) {
     e.preventDefault();
@@ -24,6 +33,15 @@ class ReviewForm extends React.Component {
     return (
       <form onSubmit={ this.submitForm }>
         Add a review form
+        <select onChange= { this.update('rating') } value={ this.state.price }>
+          <option value="5">🌟🌟🌟🌟🌟</option>
+          <option value="4">⭐⭐⭐⭐</option>
+          <option value="3">⭐⭐⭐</option>
+          <option value="2">⭐⭐</option>
+          <option value="1">💫</option>
+        </select>
+        <textarea onChange= { this.update('review') }placeholder={ "Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees." }>
+        </textarea>
         <ul>
           <li>
             <input type="submit" value="Post Review" />

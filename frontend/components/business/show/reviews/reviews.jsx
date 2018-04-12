@@ -70,7 +70,6 @@ class Reviews extends React.Component {
     return (
       <div>
         <ReviewErrorsBannerContainer />
-        Reviews Section!
         <div>
           {
             this.state.formOpen ?
