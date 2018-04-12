@@ -12,27 +12,23 @@ class Reviews extends React.Component {
       formOpen: false
     };
 
+
     this.redirectToLogin = this.redirectToLogin.bind(this);
     this.closeForm = this.closeForm.bind(this);
     this.openForm = this.openForm.bind(this);
   }
 
-  redirectToLogin (e) {
-    e.preventDefault();
+  redirectToLogin () {
     this.props.history.push('/login');
   }
 
-  openForm (e) {
-    e.preventDefault();
-    console.log('opening form');
+  openForm () {
     this.setState({
       formOpen: true
     });
   }
 
-  closeForm (e) {
-    e.preventDefault();
-    console.log('closing form');
+  closeForm () {
     this.setState({
       formOpen: false
     });
@@ -50,12 +46,10 @@ class Reviews extends React.Component {
     let buttonAction;
     switch(this.userIsLoggedIn()) {
       case true:
-        console.log('user is logged in');
         buttonAction = this.openForm;
         break;
 
       case false:
-        console.log('user not logged in');
       default:
         buttonAction = this.redirectToLogin;
         break;
@@ -64,20 +58,21 @@ class Reviews extends React.Component {
     return <button onClick={ buttonAction }>Write a Review</button>;
   }
 
+  renderCreateReviewThings () {
+    return (this.state.formOpen ? this.renderReviewForm() : this.renderCreateReviewButton());
+  }
+
   render () {
     const ReviewErrorsBannerContainer = createErrorBannerContainer('review', clearErrors);
-
+    console.log(this.props);
     return (
       <div>
         <ReviewErrorsBannerContainer />
         <div>
           {
-            this.state.formOpen ?
-              this.renderReviewForm()
-            :
-              this.renderCreateReviewButton()
+            this.renderCreateReviewThings()
           }
-          <ReviewList />
+          <ReviewList reviews={ this.props.reviews } userReviewId={ this.props.userReview === undefined ? -1 : this.props.userReview.id } />
         </div>
       </div>
     );
