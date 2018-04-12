@@ -1,6 +1,7 @@
 import React from 'react';
 
 import BusinessContainer from './business_container';
+import ReviewsContainer from './reviews/reviews_container';
 
 class BusinessPage extends React.Component {
   componentDidMount() {
@@ -20,7 +21,7 @@ class BusinessPage extends React.Component {
       <section>
         <BusinessContainer business={this.props.business} />
         <section className="business-reviews-section">
-          Ratings and Reviews Coming Soon!
+          <ReviewsContainer />
         </section>
       </section>
     );
