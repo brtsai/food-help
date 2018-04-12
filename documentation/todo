@@ -1,6 +1,3 @@
-
-add enter/return icon to categories input field to provide
-  visual cue for users that they have to hit enter to add
-  a new category
+return reviews with businesses when server is queried
 
 bonus: Implement different concurrent guest users
