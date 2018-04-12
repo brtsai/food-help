@@ -59,3 +59,7 @@ export const removeReview = reviewId => dispatch => (
     errors => dispatch(receiveReviewErrors(Object.values(errors.responseJSON)))
   )
 );
+
+export const clearErrors = () => dispatch => (
+  dispatch(receiveReviewErrors([]))
+);
