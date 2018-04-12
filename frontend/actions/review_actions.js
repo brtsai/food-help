@@ -20,9 +20,9 @@ export const receiveReviewToRemove = review => ({
   review
 });
 
-export const receiveReviewErrors = reviewErrors => ({
+export const receiveReviewErrors = errors => ({
   type: RECEIVE_REVIEW_ERRORS,
-  reviewErrors
+  errors
 });
 
 export const fetchReview = reviewId => dispatch => (
