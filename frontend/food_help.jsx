@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 
 import Root from './components/root';
 import configureStore from './store/store.js';
-import * as SearchActions from './actions/search_actions';
+import * as ReviewAPIUtil from './util/review_api_util';
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -17,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
     store = configureStore();
   }
   
-  window.SearchActions = SearchActions;
+  window.ReviewAPIUtil = ReviewAPIUtil;
   window.store = store;
   window.dispatch = store.dispatch;
   

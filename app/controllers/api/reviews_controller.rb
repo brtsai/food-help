@@ -1,3 +1,4 @@
+#TODO Prevent impersonation of other users on creating reviews
 class Api::ReviewsController < ApplicationController
   def create
     @review = Review.new(review_params)
