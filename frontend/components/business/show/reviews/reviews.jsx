@@ -64,7 +64,6 @@ class Reviews extends React.Component {
 
   render () {
     const ReviewErrorsBannerContainer = createErrorBannerContainer('review', clearErrors);
-    console.log(this.props);
     return (
       <div>
         <ReviewErrorsBannerContainer />
