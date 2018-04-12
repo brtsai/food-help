@@ -19,7 +19,7 @@ class Api::BusinessesController < ApplicationController
         end
       end
 
-      render "api/businesses/show"
+      render :show
     else
       render json: @business.errors.full_messages, status: 422
     end

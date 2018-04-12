@@ -4,6 +4,10 @@ import ReviewForm from './review_form';
 import ReviewList from './review_list';
 
 class Reviews extends React.Component {
+  componentDidMount () {
+
+  }
+
   render () {
     return (
       <div>

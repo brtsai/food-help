@@ -9,7 +9,7 @@ const businessReducer = (state = {}, action) => {
   const stateCopy = merge({}, state);
   switch(action.type) {
     case RECEIVE_BUSINESS:
-      return merge({}, stateCopy, action.business);
+      return merge({}, stateCopy, action.business.business);
     
     case RECEIVE_BUSINESSES:
       return merge({}, stateCopy, action.businesses);
