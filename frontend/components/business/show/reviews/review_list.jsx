@@ -1,13 +1,13 @@
 import React from 'react';
 
-import ReviewListItem from './review_list_item';
+import ReviewListItemContainer from './review_list_item_container';
 class ReviewList extends React.Component {
   render () {
     const reviewsToRender = this.props.reviews.filter(review => review.id !== this.props.userReviewId);
     return (
-      <ul>
+      <ul className="business-review-list">
         {
-          reviewsToRender.map(review => <ReviewListItem key={ review } review={ review } />)
+          reviewsToRender.map(review => <ReviewListItemContainer key={ review.id } review={ review } />)
         }
       </ul>
     );

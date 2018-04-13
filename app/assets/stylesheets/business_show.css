@@ -18,6 +18,11 @@
   .business-show-component {
     padding: 30px 30px 0px 30px;
   }
+  
+  .business-reviews-section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 .business-info-section {
   height: 100px;
@@ -133,12 +138,75 @@
   flex-direction: column;
   align-items: flex-start;
   margin: 0 auto;
-  padding-top: 30px;
-  justify-content: space-around;
+  padding: 30px;
+  padding-top: 80px;
+  align-items: center;
+
 }
 
+.business-review-list {
+  display: flex;
+  flex-direction: column;
+}
 
+.business-review-list-item {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 0px;
+  border-top: 1px solid #e6e6e6;
+}
+.business-review-list-item:last-child {
+  border-bottom: 1px solid #e6e6e6;
+}
 
+.review-list-item-user-information {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  width: 200px;
+}
+
+.review-list-item-user-profile-picture {
+  width: 60px;
+  height: 60px;
+}
+
+.review-list-item-user-name-and-location {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.review-list-item-user-name {
+  font-size: 14px;
+  color: #0073bb;
+  font-weight: 700;
+}
+.review-list-item-user-name:hover {
+}
+
+.review-list-item-user-location {
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.review-list-item-review-information {
+  width: 60%;
+}
+
+.review-list-item-rating-and-date {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.review-list-item-date {
+  margin-left: 2px;
+}
+
+.review-list-item-review-content {
+  font-size: 14px;
+}
 
 
 

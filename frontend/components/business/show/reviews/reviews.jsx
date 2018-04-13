@@ -2,6 +2,7 @@ import React from 'react';
 
 import ReviewForm from './review_form';
 import ReviewList from './review_list';
+import ReviewListItemContainer from './review_list_item_container';
 import { clearErrors } from '../../../../actions/review_actions';
 import { createErrorBannerContainer } from '../../../shared/errors/errors_banner_container';
 
@@ -34,8 +35,14 @@ class Reviews extends React.Component {
     });
   }
 
-  userIsLoggedIn() {
+  userIsLoggedIn () {
     return Object.keys(this.props.session).length !== 0;
+  }
+
+  userHasReview () {
+    console.log('checking if user has review');
+    console.log(this.props.userReview);
+    return this.props.userReview !== undefined;
   }
 
   renderReviewForm () {
@@ -55,7 +62,20 @@ class Reviews extends React.Component {
         break;
     }
 
-    return <button onClick={ buttonAction }>Write a Review</button>;
+    return <button className="business-reviews-write-a-review-button" onClick={ buttonAction }>Write a Review</button>;
+  }
+
+  renderUserReviewEditDeleteButtons () {
+    return (
+      <div>
+        <button><i className="fa fa-edit"></i></button>
+        <button onClick={ () => this.props.removeReview(this.props.userReview.id) } ><i className="fa fa-trash" aria-hidden="true"></i></button>
+      </div>
+    );
+  }
+
+  renderUserReview () {
+    return <ReviewListItemContainer review={ this.props.userReview } buttons={ this.renderUserReviewEditDeleteButtons() } />
   }
 
   renderCreateReviewThings () {
@@ -64,15 +84,20 @@ class Reviews extends React.Component {
 
   render () {
     const ReviewErrorsBannerContainer = createErrorBannerContainer('review', clearErrors);
+    console.log(this.props);
     return (
       <div>
         <ReviewErrorsBannerContainer />
         <div>
           {
-            this.renderCreateReviewThings()
+            this.userHasReview() ?
+              this.renderUserReview()
+            :
+              this.renderCreateReviewThings()
           }
-          <ReviewList reviews={ this.props.reviews } userReviewId={ this.props.userReview === undefined ? -1 : this.props.userReview.id } />
+
         </div>
+        <ReviewList reviews={ this.props.reviews } userReviewId={ this.userHasReview() ? this.props.userReview.id : -1 } />
       </div>
     );
   }
