@@ -7,8 +7,36 @@
   Food Help leverages a Ruby on Rails server coupled with a PostgreSQL Database on the Backend, along with React for presentation, and Redux for state on the Frontend.
 </p>
 
+<h2>
+  Technology Choices
+</h2>
+
+<h4>
+  Why Ruby on Rails?
+</h4>
+
 <p>
-  Why PostgreSQL? Food Help's core product features are based on crowdsourcing information, which requires a high degree of reliability, and stability, especially during significant read/write traffic (crowdsourced adding, rating, reviewing businesses). PostgreSQL provides a beautiful implementation of MVVC, or Multi Version Concurrency Control. <br />
+  Ruby on Rails is a great tool for faster development cycles. Rails allows developers to start a project, and start seeing results almost immediately. In fact, Food Help was built over the course of two weeks. 
+  <br />
+  <code> Move Fast and Break Things</code> <cite>- Facebook </cite>
+  
+<p> For its speed and many other reasons Ruby on Rails has been used for many other products and services you may have encountered before. Namely, <br />
+<ul>
+  <li><a href="https://www.airbnb.com/">AirBnB</a></li>
+  <li><a href="https://www.crunchbase.com/">CrunchBase</a></li>
+  <li><a href="https://www.bloomberg.com/">Bloomberg</a></li>
+  <li><a href="https://github.com/">Github</a></li>
+  <li><a href="https://www.kickstarter.com/">KickStarter</a></li>
+</ul>
+
+</p>
+
+<h4> 
+  Why PostgreSQL?
+</h4>
+
+<p>
+Food Help's core product features are based on crowdsourcing information, which requires a high degree of reliability, and stability, especially during significant read/write traffic (crowdsourced adding, rating, reviewing businesses). PostgreSQL provides a beautiful implementation of MVVC, or Multi Version Concurrency Control. <br />
   <code>Multi-Version Concurrency Control (MVCC) allows Postgres to offer high concurrency even during significant database read/write activity. MVCC specifically offers behavior where "readers never block writers, and writers never block readers".</code> <cite>-  http://momjian.us/main/presentations/internals.html#mvcc </cite>
 </p>
 
