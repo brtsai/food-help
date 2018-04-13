@@ -28,6 +28,12 @@ Key Features
 </ul>
 
 <h2>
+How To Use
+</h2>
+
+Head on over to <a href="https://food-help.herokuapp.com/#/">food-help.herokuapp.com</a> and start searching!
+
+<h2>
 Credits
 </h2>
 
