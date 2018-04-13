@@ -1,4 +1,4 @@
-# [![Markdownify](https://github.com/brtsai/food-help/blob/master/documentation/assets/logo/logo.png)](https://food-help.herokuapp.com/#/)
+# [![food help logo](https://github.com/brtsai/food-help/blob/master/documentation/assets/logo/logo.png)](https://food-help.herokuapp.com/#/)
 
 [Food Help](https://food-help.herokuapp.com/#/) is a crowdsourced business review website for rating and ranking Restaurants and other Food related Businesses. Food Help leverages a Ruby on Rails server coupled with a PostgreSQL Database on the Backend, along with React for presentation, and Redux for state on the Frontend.
 
@@ -11,6 +11,12 @@
 *   Write a review, watch your review always appear first for you!
 *   Create, Edit, Delete your review in place, on the same page of your browser!
 *   Don't like a review you posted? Change it, or even do away with it altogether!
+
+## Cool Features
+
+#### Ranked Search by Relevance
+
+# ![search usage gif](https://github.com/brtsai/food-help/blob/master/documentation/assets/usage-gifs/search-usage.gif)
 
 ## How To Use
 
