@@ -175,4 +175,5 @@ This webapp uses APIs and assets hosted by other sources.
 
 Other
 
-*   Component Wireframes created using [Balsamiq](https://github.com/brtsai/food-help/wiki/Component-Hierarchy)
+*   [Component Wireframes](https://github.com/brtsai/food-help/wiki/Component-Hierarchy)
+ created using Balsamiq
