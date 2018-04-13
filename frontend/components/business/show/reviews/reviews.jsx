@@ -69,7 +69,6 @@ class Reviews extends React.Component {
     );
   }
 
-
   renderUserReviewEditDeleteButtons () {
     return (
       <div className="user-review-edit-delete-buttons" >
