@@ -27,3 +27,19 @@ Key Features
   </li>
 </ul>
 
+<h2>
+Credits
+</h2>
+
+This webapp uses APIs and assets hosted by other sources.
+<ul>
+  <li>
+     Login Art and Cityscape Footer Art: Yelp
+  </li>
+  <li>
+     Maps: Google Maps Static and Interactive Maps APIs
+  </li>
+  <li>
+     Business trifold and Stock profile images: Hosted by Instagram (Images from my instagram, links from pictaram.net's instagram scraper)
+  </li>
+</ul>
