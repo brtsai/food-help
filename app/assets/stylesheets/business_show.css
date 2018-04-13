@@ -105,6 +105,12 @@
   justify-content: space-around;
 }
 
+.google-map {
+  width: 500px;
+  height: 500px;
+  background: red;
+}
+
 .image-trifold-list {
   display: flex;
   flex-direction: row;
