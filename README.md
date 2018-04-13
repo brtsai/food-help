@@ -12,15 +12,21 @@
 *   Create, Edit, Delete your review in place, on the same page of your browser!
 *   Don't like a review you posted? Change it, or even do away with it altogether!
 
+## How To Get
+
+Head on over to [Food Help](https://food-help.herokuapp.com/#/) and start reviewing!
+
 ## Cool Features
 
 #### Ranked Search by Relevance
 
 # ![search usage gif](https://github.com/brtsai/food-help/blob/master/documentation/assets/usage-gifs/search-usage.gif)
 
-## How To Use
+#### Reviews
 
-Head on over to [Food Help](https://food-help.herokuapp.com/#/) and start reviewing!
+*   Write/edit/delete reviews on the same page
+*   Your reviews are always on top
+# ![search usage gif](https://github.com/brtsai/food-help/blob/master/documentation/assets/usage-gifs/reviews-usage.gif)
 
 ## Technology Choices
 
