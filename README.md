@@ -8,6 +8,38 @@
 </p>
 
 <h2>
+Key Features
+</h2>
+
+<ul>
+  <li>
+    Login, Create a New Account, or simply browse as a Guest
+  </li>
+  <li>
+    Add Businesses, and help fill Food Help's communal database
+  </li>
+  <li>
+     Search for Businesses, and receive a list ranked by relevance!
+  </li>
+  <li>
+     Need help a place? No problem. Click on the business' static map to get an interactive google maps modal!
+  </li>
+  <li>
+    Crowdsource Business Reviews and Ratings
+  </li>
+  <li>
+    Don't like a review you posted? Change it, or even do away with it altogether!  
+  </li>
+</ul>
+
+<h2>
+How To Use
+</h2>
+
+Head on over to <a href="https://food-help.herokuapp.com/#/">Food Help</a> and start reviewing!
+
+
+<h2>
   Technology Choices
 </h2>
 
@@ -62,37 +94,6 @@ Food Help's core product features are based on crowdsourcing information, which 
   <br />
   <cite> - https://reactjs.org/docs/reconciliation.html</cite>
 </p>
-
-<h2>
-Key Features
-</h2>
-
-<ul>
-  <li>
-    Login, Create a New Account, or simply browse as a Guest
-  </li>
-  <li>
-    Add Businesses, and help fill Food Help's communal database
-  </li>
-  <li>
-     Search for Businesses, and receive a list ranked by relevance!
-  </li>
-  <li>
-     Need help a place? No problem. Click on the business' static map to get an interactive google maps modal!
-  </li>
-  <li>
-    Crowdsource Business Reviews and Ratings
-  </li>
-  <li>
-    Don't like a review you posted? Change it, or even do away with it altogether!  
-  </li>
-</ul>
-
-<h2>
-How To Use
-</h2>
-
-Head on over to <a href="https://food-help.herokuapp.com/#/">Food Help</a> and start reviewing!
 
 <h2>
 Credits
