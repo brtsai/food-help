@@ -11,6 +11,7 @@ class BusinessLocationDetail extends React.Component {
     });
 
     this.showModal = this.showModal.bind(this);
+    this.hideModal = this.hideModal.bind(this);
   }
 
   staticMapImageString() {
@@ -22,6 +23,14 @@ class BusinessLocationDetail extends React.Component {
     this.setState({
       renderingModal: true
     });
+  }
+
+  hideModal (e) {
+    e.preventDefault();
+    console.log('hiding modal');
+    this.setState({
+      renderingModal: false
+    }, () => console.log(this.state));
   }
 
   render () {
@@ -44,7 +53,7 @@ class BusinessLocationDetail extends React.Component {
           </ul>
         </section>
         {
-          this.state.renderingModal ? <MapModal business={ this.props.business } /> : ""
+          this.state.renderingModal ? <MapModal business={ this.props.business } close={ this.hideModal } /> : ""
         }
       </section>
     );
