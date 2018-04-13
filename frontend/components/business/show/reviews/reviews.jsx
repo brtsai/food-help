@@ -41,8 +41,6 @@ class Reviews extends React.Component {
   }
 
   userHasReview () {
-    console.log('checking if user has review');
-    console.log(this.props.userReview);
     return this.props.userReview !== undefined;
   }
 
@@ -89,7 +87,6 @@ class Reviews extends React.Component {
 
   render () {
     const ReviewErrorsBannerContainer = createErrorBannerContainer('review', clearErrors);
-    console.log(this.props);
     return (
       <div>
         <ReviewErrorsBannerContainer />

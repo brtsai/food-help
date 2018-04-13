@@ -22,7 +22,6 @@ class SearchResultsPage extends React.Component {
 
   searchBusinesses() {
     const query = this.parseUrlQueryString();
-    console.log(query);
     this.props.searchBusinesses(query.search_string);
   }
 

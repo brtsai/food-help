@@ -47,7 +47,6 @@ class ReviewListItem extends React.Component {
   }
 
   renderDate () {
-    console.log(this.props.review.created_at);
     const timestamp = this.props.review.created_at;
     const year = timestamp.substr(0,4);
     const month = timestamp.substr(5,2);
@@ -86,7 +85,6 @@ class ReviewListItem extends React.Component {
   }
 
   render () {
-    console.log(this.props);
     return (
       <li className="business-review-list-item">
         {
