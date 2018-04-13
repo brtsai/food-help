@@ -177,3 +177,9 @@ Other
 
 *   [Component Wireframes](https://github.com/brtsai/food-help/wiki/Component-Hierarchy)
  created using Balsamiq
+
+## Possible Future Directions/Features
+
+*   Redirect user back to page that required they log in
+*   Include search filters
+*   Implement user profile page
