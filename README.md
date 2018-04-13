@@ -3,7 +3,7 @@
 </h1>
 
 <p>
-  Food Help is a crowdsourced business review website for rating and ranking Restaurants and other Food related Businesses. 
+  <a href="https://food-help.herokuapp.com/#/">Food Help</a> is a crowdsourced business review website for rating and ranking Restaurants and other Food related Businesses. 
   Food Help leverages a Ruby on Rails server coupled with a PostgreSQL Database on the Backend, along with React for presentation, and Redux for state on the Frontend.
 </p>
 
