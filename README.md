@@ -2,6 +2,16 @@
   <a href="https://food-help.herokuapp.com/#/"><img src="https://github.com/brtsai/food-help/blob/master/documentation/assets/logo/logo.png" alt="Markdownify" width="280"></a>
 </h1>
 
+<p>
+  Food Help is a crowdsourced business review website for rating and ranking Restaurants and other Food related Businesses. 
+  Food Help leverages a Ruby on Rails server coupled with a PostgreSQL Database on the Backend, along with React for presentation, and Redux for state on the Frontend.
+</p>
+
+<p>
+  Why PostgreSQL? Food Help's core product features are based on crowdsourcing information, which requires a high degree of reliability, and stability, especially during significant read/write traffic (crowdsourced adding, rating, reviewing businesses). PostgreSQL provides a beautiful implementation of MVVC, or Multi Version Concurrency Control. <br />
+  <code>Multi-Version Concurrency Control (MVCC) allows Postgres to offer high concurrency even during significant database read/write activity. MVCC specifically offers behavior where "readers never block writers, and writers never block readers".</code> <cite>-  http://momjian.us/main/presentations/internals.html#mvcc </cite>
+</p>
+
 <h2>
 Key Features
 </h2>
