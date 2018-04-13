@@ -75,7 +75,6 @@ class SearchResultItem extends React.Component {
           </div>
           
           <div className="search-result-item-review-container">
-            Review
           </div>
 
         </div>
