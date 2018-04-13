@@ -69,7 +69,7 @@ Key Features
 How To Use
 </h2>
 
-Head on over to <a href="https://food-help.herokuapp.com/#/">food-help.herokuapp.com</a> and start searching!
+Head on over to <a href="https://food-help.herokuapp.com/#/">Food Help</a> and start reviewing!
 
 <h2>
 Credits
