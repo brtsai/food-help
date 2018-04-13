@@ -2,8 +2,6 @@
   <a href="https://food-help.herokuapp.com/#/"><img src="https://github.com/brtsai/food-help/blob/master/documentation/assets/logo/logo.png" alt="Markdownify" width="280"></a>
 </h1>
 
-<hr />
-
 <h2>
 Key Features
 </h2>
