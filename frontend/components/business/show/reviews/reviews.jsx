@@ -11,9 +11,7 @@ class Reviews extends React.Component {
     super(props);
     this.state = {
       formOpen: false,
-      formAction: this.props.addReview
     };
-
 
     this.redirectToLogin = this.redirectToLogin.bind(this);
     this.closeForm = this.closeForm.bind(this);
@@ -45,8 +43,15 @@ class Reviews extends React.Component {
     return this.props.userReview !== undefined;
   }
 
+  formAction () {
+    if (this.userHasReview()) {
+      return this.props.updateReview;
+    }
+    return this.props.addReview;
+  }
+
   renderReviewForm () {
-    return <ReviewForm closeForm={ this.closeForm } userId={ Object.keys(this.props.session)[0] } businessId={ this.props.match.params.businessId } formAction={ this.props.formAction } review={ this.props.userReview } />;
+    return <ReviewForm closeForm={ this.closeForm } userId={ Object.keys(this.props.session)[0] } businessId={ this.props.match.params.businessId } formAction={ this.formAction() } review={ this.props.userReview } />;
   }
 
   renderCreateReviewButton () {
@@ -72,14 +77,18 @@ class Reviews extends React.Component {
   renderUserReviewEditDeleteButtons () {
     return (
       <div className="user-review-edit-delete-buttons" >
-        <button className="user-review-edit-button" ><i className="fa fa-edit"></i></button>
+        <button className="user-review-edit-button" onClick={ this.openForm }><i className="fa fa-edit"></i></button>
         <button className="user-review-delete-button" onClick={ () => this.props.removeReview(this.props.userReview.id) } ><i className="fa fa-trash" aria-hidden="true"></i></button>
       </div>
     );
   }
 
-  renderUserReview () {
+  renderUserReview() {
     return <ReviewListItemContainer review={ this.props.userReview } buttons={ this.renderUserReviewEditDeleteButtons() } />
+  }
+
+  renderUserReviewThings () {
+    return (this.state.formOpen ? this.renderReviewForm() : this.renderUserReview() );
   }
 
   renderCreateReviewThings () {
@@ -94,7 +103,7 @@ class Reviews extends React.Component {
         <div className="business-reviews-current-user-review-slot" >
           {
             this.userHasReview() ?
-              this.renderUserReview()
+              this.renderUserReviewThings()
             :
               this.renderCreateReviewThings()
           }
