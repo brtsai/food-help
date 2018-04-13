@@ -172,3 +172,14 @@ This webapp uses APIs and assets hosted by other sources.
 *   Login Art and Cityscape Footer Art: Yelp
 *   Maps: Google Maps Static and Interactive Maps APIs
 *   Business trifold and Stock profile images: Hosted by Instagram (Images from my instagram, links from pictaram.net's instagram scraper)
+
+Other
+
+*   [Component Wireframes](https://github.com/brtsai/food-help/wiki/Component-Hierarchy)
+ created using Balsamiq
+
+## Possible Future Directions/Features
+
+*   Redirect user back to page that required they log in
+*   Include search filters
+*   Implement user profile page
