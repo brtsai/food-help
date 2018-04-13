@@ -22,7 +22,7 @@ Key Features
      Search for Businesses, and receive a list ranked by relevance!
   </li>
   <li>
-     Need help a place? No problem. Click on the business' static map to get an interactive google maps modal!
+     Need help finding a place? No problem. Click on the business' static map to get an interactive google maps modal!
   </li>
   <li>
     Write a review, watch your review always appear first for you!
