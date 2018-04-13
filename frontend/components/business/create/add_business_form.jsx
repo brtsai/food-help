@@ -21,7 +21,7 @@ class AddBusinessForm extends React.Component {
       top: 0,
       behavior: "smooth",
     });
-    this.props.addBusiness(this.state).then(success => (this.props.history.push(`/biz/${Object.keys(success.business)[0]}`)));
+    this.props.addBusiness(this.state).then(success => (this.props.history.push(`/biz/${Object.keys(success.business.business)[0]}`)));
   }
 
   update (type) {
