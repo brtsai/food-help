@@ -25,7 +25,7 @@ Key Features
      Need help a place? No problem. Click on the business' static map to get an interactive google maps modal!
   </li>
   <li>
-    Crowdsource Business Reviews and Ratings
+    Write a review, watch your review always bubble to the top of the reviews list. Create, Edit, Delete your review in place, on the same page of your browser!
   </li>
   <li>
     Don't like a review you posted? Change it, or even do away with it altogether!  
