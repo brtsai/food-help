@@ -18,7 +18,7 @@
 <p>
   Ruby on Rails is a great tool for faster development cycles. Rails allows developers to start a project, and start seeing results almost immediately. In fact, Food Help was built over the course of two weeks. 
   <br />
-  <code> Move Fast and Break Things</code> <cite>- Facebook </cite>
+  <code> "Move Fast and Break Things"</code> <cite>- Facebook </cite>
   
 <p> For its speed and many other reasons Ruby on Rails has been used for many other products and services you may have encountered before. Namely, <br />
 <ul>
@@ -37,7 +37,7 @@
 
 <p>
 Food Help's core product features are based on crowdsourcing information, which requires a high degree of reliability, and stability, especially during significant read/write traffic (crowdsourced adding, rating, reviewing businesses). PostgreSQL provides a beautiful implementation of MVVC, or Multi Version Concurrency Control. <br />
-  <code>Multi-Version Concurrency Control (MVCC) allows Postgres to offer high concurrency even during significant database read/write activity. MVCC specifically offers behavior where "readers never block writers, and writers never block readers".</code> <cite>-  http://momjian.us/main/presentations/internals.html#mvcc </cite>
+  <code>"Multi-Version Concurrency Control (MVCC) allows Postgres to offer high concurrency even during significant database read/write activity. MVCC specifically offers behavior where 'readers never block writers, and writers never block readers'."</code> <cite>-  http://momjian.us/main/presentations/internals.html#mvcc </cite>
 </p>
 
 <h4>
@@ -55,9 +55,9 @@ Food Help's core product features are based on crowdsourcing information, which 
 <p>
   Rerendering and conditional rerendering essentially boils down to editing/transforming the DOM/CSSOM tree in your browser, which can be pretty hairing considering trees are combinatorial(think n choose k, factorials) data structures in nature. Thankfully, where combinatorics is involved, similar problems faced in real life tend to be quite amenable to heuristic solutions. As is the case with React's conditional rerendering <i>Reconciliation</i> algorithm.
   <br />
-<code>There are some generic solutions to this algorithmic problem of generating the minimum number of operations to transform one tree into another. However, the state of the art algorithms have a complexity in the order of O(n3) where n is the number of elements in the tree.
+<code>"There are some generic solutions to this algorithmic problem of generating the minimum number of operations to transform one tree into another. However, the state of the art algorithms have a complexity in the order of O(n3) where n is the number of elements in the tree.
   
-  If we used this in React, displaying 1000 elements would require in the order of one billion comparisons. This is far too expensive. Instead, React implements a heuristic O(n) algorithm...
+  If we used this in React, displaying 1000 elements would require in the order of one billion comparisons. This is far too expensive. Instead, React implements a heuristic O(n) algorithm..."
   </code>
   <br />
   <cite> - https://reactjs.org/docs/reconciliation.html</cite>
