@@ -86,6 +86,46 @@ def index
   end
 ```
 
+#### In Place Reviews
+
+*   Decide what to render/do based on two criteria
+       1. Is the review form open?
+       2. Does the current user already have a review?
+
+```javascript
+    constructor (props) {
+        //
+        this.state = {
+          formOpen: false,
+        };
+        //
+    }
+    
+    userHasReview () {
+        return this.props.userReview !== undefined;
+    }
+
+    renderUserReviewThings () {
+        return (this.state.formOpen ? this.renderReviewForm() : this.renderUserReview() );
+    }
+    
+    renderCreateReviewThings () {
+        return (this.state.formOpen ? this.renderReviewForm() : this.renderCreateReviewButton());
+    }
+
+    render () {
+        //
+        {
+            this.userHasReview() ?
+              this.renderUserReviewThings()
+            :
+              this.renderCreateReviewThings()
+          }
+        }
+        //
+    }
+```
+
 ## Technology Choices
 
 #### Why Ruby on Rails?
