@@ -95,6 +95,35 @@ Food Help's core product features are based on crowdsourcing information, which 
   <cite> - https://reactjs.org/docs/reconciliation.html</cite>
 </p>
 
+
+<h4>
+  Why Redux?
+</h4>
+
+<h5>
+  <strong>
+    <i>
+      DFA Properties
+    </i>
+  </strong>
+</h5>
+<p>
+  Redux is essentially based on the Deterministic Finite Automata computational model which has plenty of useful and interesting properties. Of which, one of the more identifiably useful properties is determinism.
+  <br />
+  Determinism between state transitions in Redux allows for replayability of user interactions with your product which leads to robust and reliable debugging of errors and features, resulting in an overall better product.
+</p>
+
+<h5>
+  <strong>
+    <i>
+      Separation of Concerns
+    </i>
+  </strong>
+</h5>
+<p>
+  Using Redux in conjunction with React allows for greater separation of concerns on the frontend between presentational components, and stateful components that keep track of the user's session and browser state.
+  This Separation of Concerns allows for a much cleaner and robust codebase which means that easily convoluted programming patterns such as prop threading are no longer necessary (unless of course, your codebase happens to be a labyrinth and your name happens to be Theseus).
+</p>
 <h2>
 Credits
 </h2>
