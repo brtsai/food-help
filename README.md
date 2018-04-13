@@ -53,7 +53,7 @@ Food Help's core product features are based on crowdsourcing information, which 
 </h5>
 
 <p>
-  Rerendering and conditional rerendering essentially boils down to editing/transforming the DOM/CSSOM tree in your browser, which can be pretty hairing considering trees are combinatorial(think n choose k, factorials) data structures in nature. Thankfully, where combinatorics is involved, similar problems faced in real life tend to be quite amenable to heuristic solutions. As is the case with React's conditional rerendering <i>Reconciliation</i> algorithm.
+  Rerendering and conditional rerendering essentially boils down to editing/transforming the DOM/CSSOM tree in your browser, which can be pretty hairing considering trees are combinatorial(think n choose k, factorials) data structures in nature. Thankfully, where combinatorics is involved, similar problems faced in real life tend to be quite amenable to heuristic solutions. As is the case with React's conditional rerendering <i>Reconciliation</i> algorithm;
   <br />
 <code>"There are some generic solutions to this algorithmic problem of generating the minimum number of operations to transform one tree into another. However, the state of the art algorithms have a complexity in the order of O(n3) where n is the number of elements in the tree.
   
