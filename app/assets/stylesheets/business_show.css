@@ -143,6 +143,9 @@
   align-items: center;
 
 }
+.business-reviews-content {
+  width: 50%;
+}
 
 .business-review-list {
   display: flex;
@@ -206,6 +209,31 @@
 
 .review-list-item-review-content {
   font-size: 14px;
+}
+
+.user-review-edit-delete-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: baseline;
+}
+
+.user-review-edit-delete-buttons button {
+  padding: 0px 2px;
+}
+
+.user-review-edit-button {
+  color: #757575;
+}
+.user-review-edit-button:hover {
+  color: #1074B9;
+}
+
+.user-review-delete-button {
+  color: #757575;
+}
+.user-review-delete-button:hover {
+  color: #E60F1B;
 }
 
 .business-reviews-current-user-review-slot {

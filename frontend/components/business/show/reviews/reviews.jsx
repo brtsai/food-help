@@ -10,7 +10,8 @@ class Reviews extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
-      formOpen: false
+      formOpen: false,
+      formAction: this.props.addReview
     };
 
 
@@ -45,7 +46,7 @@ class Reviews extends React.Component {
   }
 
   renderReviewForm () {
-    return <ReviewForm closeForm={ this.closeForm } userId={ Object.keys(this.props.session)[0] } businessId={ this.props.match.params.businessId } formAction={ this.props.addReview } />;
+    return <ReviewForm closeForm={ this.closeForm } userId={ Object.keys(this.props.session)[0] } businessId={ this.props.match.params.businessId } formAction={ this.props.formAction } review={ this.props.userReview } />;
   }
 
   renderCreateReviewButton () {
@@ -68,11 +69,12 @@ class Reviews extends React.Component {
     );
   }
 
+
   renderUserReviewEditDeleteButtons () {
     return (
-      <div>
-        <button><i className="fa fa-edit"></i></button>
-        <button onClick={ () => this.props.removeReview(this.props.userReview.id) } ><i className="fa fa-trash" aria-hidden="true"></i></button>
+      <div className="user-review-edit-delete-buttons" >
+        <button className="user-review-edit-button" ><i className="fa fa-edit"></i></button>
+        <button className="user-review-delete-button" onClick={ () => this.props.removeReview(this.props.userReview.id) } ><i className="fa fa-trash" aria-hidden="true"></i></button>
       </div>
     );
   }
@@ -88,7 +90,7 @@ class Reviews extends React.Component {
   render () {
     const ReviewErrorsBannerContainer = createErrorBannerContainer('review', clearErrors);
     return (
-      <div>
+      <div className="business-reviews-content">
         <ReviewErrorsBannerContainer />
         <div className="business-reviews-current-user-review-slot" >
           {
