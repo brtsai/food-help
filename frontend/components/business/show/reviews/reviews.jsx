@@ -30,6 +30,7 @@ class Reviews extends React.Component {
   }
 
   closeForm () {
+    this.props.clearErrors();
     this.setState({
       formOpen: false
     });

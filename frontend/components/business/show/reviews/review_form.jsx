@@ -33,12 +33,8 @@ class ReviewForm extends React.Component {
   }
 
   submitForm (e) {
-    console.log('preventing default');
-    console.log(e);
     e.preventDefault();
-    console.log('posting review');
     this.props.formAction(this.state).then(() => {
-      this.clearForm();
       this.props.closeForm();
     });
   }

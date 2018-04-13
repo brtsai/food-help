@@ -17,11 +17,13 @@ const sessionReducer = (state = {}, action) => {
       const user = stateCopy[review.user_id];
       const reviewIds = user.reviews;
       stateCopy[review.user_id].reviews = reviewIds.filter(id => (id !== review.id));
+      delete stateCopy[review.user_id].businessToReview[review.business_id];
       return stateCopy;
 
     case RECEIVE_REVIEW:
       review = Object.values(action.review)[0];
       stateCopy[review.user_id].reviews.push(review.id);
+      stateCopy[review.user_id].businessToReview[review.business_id] = review.id;
       return stateCopy;
 
     default:
