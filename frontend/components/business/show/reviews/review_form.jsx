@@ -46,8 +46,8 @@ class ReviewForm extends React.Component {
 
   render () {
     return (
-      <form onSubmit={ this.submitForm }>
-        <select onChange= { this.update('rating') } value={ this.state.price }>
+      <form className="business-review-form" onSubmit={ this.submitForm }>
+        <select className="business-review-form-select" onChange= { this.update('rating') } value={ this.state.price }>
           <option value="" hidden>Select Your Rating</option>
           <option value="5">🌟🌟🌟🌟🌟</option>
           <option value="4">⭐⭐⭐⭐</option>
@@ -55,14 +55,14 @@ class ReviewForm extends React.Component {
           <option value="2">⭐⭐</option>
           <option value="1">💫</option>
         </select>
-        <textarea onChange= { this.update('review') }placeholder={ "Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees." }>
+        <textarea className="business-review-form-textarea" onChange= { this.update('review') }placeholder={ "Your review helps others learn about great local businesses.\n\nPlease don't review this business if you received a freebie for writing this review, or if you're connected in any way to the owner or employees." }>
         </textarea>
-        <ul>
+        <ul className="business-review-form-buttons" >
           <li>
-            <input type="submit" value="Post Review" />
+            <input className="business-review-form-submit-button" type="submit" value="Post Review" />
           </li>
           <li>
-            <button onClick={ this.closeForm }>cancel</button>
+            <button className="business-review-form-cancel-button" onClick={ this.closeForm }>cancel</button>
           </li>
         </ul>
       </form>

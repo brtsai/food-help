@@ -139,7 +139,7 @@
   align-items: flex-start;
   margin: 0 auto;
   padding: 30px;
-  padding-top: 80px;
+  padding-top: 60px;
   align-items: center;
 
 }
@@ -207,6 +207,94 @@
 .review-list-item-review-content {
   font-size: 14px;
 }
+
+.business-reviews-current-user-review-slot {
+  padding-bottom: 30px;
+}
+
+.business-reviews-write-a-review-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.business-reviews-write-a-review-button {
+  background-color: #d90007;
+  color: white;
+  width: 160px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #8d0005;
+  border-radius: 3px;
+}
+.business-reviews-write-a-review-button:hover {
+  background-color: #E60F1B;
+}
+
+.business-review-form {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  padding: 10px;
+}
+
+.business-review-form-select {
+  border: 1px solid #ccc;
+  color: #757575;
+}
+
+.business-review-form-textarea {
+  resize: none;
+  height: 9em;
+}
+
+.business-review-form-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.business-review-form-submit-button {
+  background-color: #d90007;
+  color: white;
+  width: 160px;
+  height: 35px;
+  text-align: center;
+  border: 1px solid #8d0005;
+  border-radius: 3px;
+}
+.business-review-form-submit-button:hover {
+  background-color: #E60F1B;
+}
+
+.business-review-form-cancel-button {
+  color: #1074B9;
+}
+.business-review-form-cancel-button:hover {
+  color: #E60F1B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

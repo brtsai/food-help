@@ -63,7 +63,11 @@ class Reviews extends React.Component {
         break;
     }
 
-    return <button className="business-reviews-write-a-review-button" onClick={ buttonAction }>Write a Review</button>;
+    return (
+      <div className="business-reviews-write-a-review-button-container">
+        <button className="business-reviews-write-a-review-button" onClick={ buttonAction }>Write a Review</button>
+      </div>
+    );
   }
 
   renderUserReviewEditDeleteButtons () {
@@ -89,7 +93,7 @@ class Reviews extends React.Component {
     return (
       <div>
         <ReviewErrorsBannerContainer />
-        <div>
+        <div className="business-reviews-current-user-review-slot" >
           {
             this.userHasReview() ?
               this.renderUserReview()
