@@ -6,8 +6,6 @@ const reviewErrorsReducer = (state = [], action) => {
 
   switch(action.type) {
     case RECEIVE_REVIEW_ERRORS:
-      console.log('logging review errors action');
-      console.log(action);
       return action.errors;
 
     case RECEIVE_ROUTE_CHANGE:

@@ -3,7 +3,6 @@ import React from 'react';
 class ReviewForm extends React.Component {
   constructor (props) {
     super(props);
-    console.log(this.props);
     this.state = this.props.review || {
       user_id: this.props.userId,
       business_id: this.props.businessId,

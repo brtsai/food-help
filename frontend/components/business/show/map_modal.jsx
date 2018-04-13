@@ -2,7 +2,6 @@ import React from 'react';
 
 class MapModal extends React.Component {
   componentDidMount() {
-    console.log(this.props.business);
     const latitude = parseFloat(this.props.business.latitude);
     const longitude = parseFloat(this.props.business.longitude);
     // set the map to show SF

@@ -27,10 +27,9 @@ class BusinessLocationDetail extends React.Component {
 
   hideModal (e) {
     e.preventDefault();
-    console.log('hiding modal');
     this.setState({
       renderingModal: false
-    }, () => console.log(this.state));
+    });
   }
 
   render () {
