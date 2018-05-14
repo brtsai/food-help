@@ -16,7 +16,7 @@ class AddBusinessForm extends React.Component {
     };
 
     this.submitForm = this.submitForm.bind(this);
-    this.updateLocation = lodash.debounce(this.update('businessLocation'), 500);
+    this.updateLocation = debounce(this.update('businessLocation'), 500);
   }
 
   submitForm (e) {
