@@ -5,10 +5,10 @@ class SearchResultItem extends React.Component {
   mapIdToStockImageUrl (id) {
     const imageUrls = [
       "/assets/shabu.jpg",
-      "https://scontent.cdninstagram.com/vp/c54dd5aca82a7073e46c1e036eccb7d4/5B55C1A9/t51.2885-15/s640x640/sh0.08/e35/28152121_165953720865739_1522247889873534976_n.jpg",
-      "https://scontent.cdninstagram.com/vp/b6139e2f614810312507340083100acb/5B675980/t51.2885-15/s640x640/sh0.08/e35/27892505_422662831479780_1102797140318486528_n.jpg",
-      "https://scontent.cdninstagram.com/vp/a6345337e3f8717ccb1673bf61dbde8b/5AD0B5EE/t51.2885-15/s320x320/e35/29417525_585293405167767_787768809644621824_n.jpg",
-      "https://scontent.cdninstagram.com/vp/1a1551ca874fbb897c50721bb1ce9ebd/5B55ED66/t51.2885-15/e35/p320x320/27576408_191774751577893_1680923175996620800_n.jpg"
+      "/assets/pho.jpg",
+      "/assets/yayoi.jpg",
+      "/assets/filam.jpg",
+      "/assets/cake.jpg"
     ];
 
     return imageUrls[id%5];
