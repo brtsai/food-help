@@ -115,7 +115,7 @@ class AddBusinessForm extends React.Component {
         </label>
 
         <label> Location
-          <input type="string" onChange= { this.updateLocation } value={this.state.businessLocation} />
+          <input type="string" onChange= { this.update('businessLocation') } value={this.state.businessLocation} />
         </label>
 
         <label> Price
