@@ -124,7 +124,7 @@ class AddBusinessForm extends React.Component {
           </select>
         </label>
         
-        <label for="add-category"> Categories
+        <label htmlFor="add-category"> Categories
         </label>
           
           {
