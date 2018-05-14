@@ -1,4 +1,5 @@
 import React from 'react';
+import { debounce } from 'lodash';
 
 class AddBusinessForm extends React.Component {
   constructor (props) {
@@ -8,6 +9,8 @@ class AddBusinessForm extends React.Component {
       owner_id: this.props.ownerId,
       price: 1,
       categories: [],
+      name: '',
+      businessLocation: '',
       //latitude: 37.7867,
       //longitude: -122.4
     };
@@ -111,7 +114,7 @@ class AddBusinessForm extends React.Component {
         </label>
 
         <label> Location
-          <input type="string"/>
+          <input type="string" onChange= { this.update('businessLocation') } value={this.state.businessLocation} />
         </label>
 
         <label> Price
