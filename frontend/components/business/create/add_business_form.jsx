@@ -8,8 +8,8 @@ class AddBusinessForm extends React.Component {
       owner_id: this.props.ownerId,
       price: 1,
       categories: [],
-      latitude: 37.7867,
-      longitude: -122.4
+      //latitude: 37.7867,
+      //longitude: -122.4
     };
 
     this.submitForm = this.submitForm.bind(this);
