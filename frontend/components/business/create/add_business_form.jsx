@@ -110,6 +110,9 @@ class AddBusinessForm extends React.Component {
           <input type="string" onChange= { this.update('name') } placeholder="Mel's Diner" value={this.state.name} />
         </label>
 
+        <label> Location
+          <input type="string"/>
+        </label>
 
         <label> Price
           <select onChange= { this.update('price') } value={ this.state.price }>
