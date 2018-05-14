@@ -75,13 +75,7 @@ class AddBusinessForm extends React.Component {
     }
   }
 
-  render () {
-    return (
-      <form className="add-business-form">
-        <label> Business Name
-          <input type="string" onChange= { this.update('name') } placeholder="Mel's Diner" value={this.state.name} />
-        </label>
-        
+/**
         <label> Neighbourhood
           <input type="string" onChange= { this.update('neighbourhood') } placeholder="Soma" value={this.state.neighbourhood} />
         </label>
@@ -105,6 +99,17 @@ class AddBusinessForm extends React.Component {
         <label> Longitude
           <input type="number" step="any" onChange= { this.update('longitude') } placeholder="-122.0312" value={this.state.longitude} />
         </label>
+
+**/
+
+
+  render () {
+    return (
+      <form className="add-business-form">
+        <label> Business Name
+          <input type="string" onChange= { this.update('name') } placeholder="Mel's Diner" value={this.state.name} />
+        </label>
+
 
         <label> Price
           <select onChange= { this.update('price') } value={ this.state.price }>
