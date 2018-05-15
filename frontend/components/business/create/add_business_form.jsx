@@ -16,7 +16,6 @@ class AddBusinessForm extends React.Component {
     };
 
     this.submitForm = this.submitForm.bind(this);
-    this.updateLocation = debounce(this.update('businessLocation'), 500);
   }
 
   submitForm (e) {
@@ -28,7 +27,19 @@ class AddBusinessForm extends React.Component {
     this.props.addBusiness(this.state).then(success => (this.props.history.push(`/biz/${Object.keys(success.business.business)[0]}`)));
   }
 
-  update (type) {
+  update (type, callback) {
+    if (type === "location") {
+      return e => {
+        e.preventDefault();
+        this.setState({
+          businessLocation: e.target.value
+        },
+        () => {
+          callback();
+        });
+      };
+    }
+    
     return e => {
       e.preventDefault();
       this.setState({
