@@ -7,7 +7,8 @@ const convertGeocoding = geocoding => {
   console.log(geocoding);
 
   return {
-
+    lat: geocoding.geometry.location.lat,
+    lng: geocoding.geometry.location.lng
   };
 }
 
