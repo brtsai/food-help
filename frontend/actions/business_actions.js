@@ -1,4 +1,5 @@
 import * as BusinessAPIUtil from '../util/business_api_util';
+import * as GeocodeAPIUtil from '../util/geocoding_api_util';
 
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_BUSINESSES = 'RECEIVE_BUSINESSES';
