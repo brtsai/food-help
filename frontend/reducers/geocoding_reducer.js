@@ -1,10 +1,19 @@
 import { merge } from 'lodash';
 
-import { RECEIVE_GEOCODING, RECEIVE_GEOCODING_ERRORS } from '../actions/business_actions';
+import { RECEIVE_GEOCODING } from '../actions/business_actions';
 
 const geocodingReducer = (state = {}, action) => {
-  console.log('geocoding reducer hit');
-  return state;
+  Object.freeze(state);
+
+  switch (action.type) {
+    case RECEIVE_GEOCODING:
+      console.log('received geocoding');
+      console.log(action.geocoding);
+      return state;
+
+    default:
+      return state;
+  }
 };
 
 export default geocodingReducer;
