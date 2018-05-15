@@ -4,6 +4,7 @@ import * as GeocodeAPIUtil from '../util/geocoding_api_util';
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_BUSINESSES = 'RECEIVE_BUSINESSES';
 export const RECEIVE_BUSINESS_ERRORS = 'RECEIVE_BUSINESS_ERRORS';
+export const RECEIVE_GEOCODING = 'RECEIVE_GEOCODING';
 
 export const receiveBusiness = business => ({
   type: RECEIVE_BUSINESS,
@@ -18,6 +19,11 @@ export const receiveBusinesses = businesses => ({
 export const receiveBusinessErrors = errors => ({
   type: RECEIVE_BUSINESS_ERRORS,
   errors
+});
+
+export const receiveGeocoding = geocoding => ({
+  type: RECEIVE_GEOCODING,
+  geocoding
 });
 
 export const fetchBusiness = businessId => dispatch => (
