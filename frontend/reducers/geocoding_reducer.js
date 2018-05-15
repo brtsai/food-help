@@ -1,6 +1,6 @@
 import { merge } from 'lodash';
 
-import { RECEIVE_GEOCODING } from '../actions/business_actions';
+import { RECEIVE_GEOCODING } from '../actions/geocoding_actions';
 
 const geocodingReducer = (state = {}, action) => {
   Object.freeze(state);
