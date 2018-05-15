@@ -59,7 +59,7 @@ export const clearErrors = () => dispatch => (
 
 export const geocodeLocation = businessLocation => dispatch => (
   GeocodeAPIUtil.geocode(businessLocation).then(
-    geocoding => (dispatch(receiveGeocoding(geocoding))),
+    geocoding => (dispatch(receiveGeocoding(geocoding.results[0]))),
     errors => dispatch(receiveGeocodingErrors(Object.values(errors.responseJSON)))
   )
 );
