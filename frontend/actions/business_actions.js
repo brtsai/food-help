@@ -5,6 +5,7 @@ export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_BUSINESSES = 'RECEIVE_BUSINESSES';
 export const RECEIVE_BUSINESS_ERRORS = 'RECEIVE_BUSINESS_ERRORS';
 export const RECEIVE_GEOCODING = 'RECEIVE_GEOCODING';
+export const RECEIVE_GEOCODING_ERRORS = 'RECEIVE_GEOCODING_ERRORS';
 
 export const receiveBusiness = business => ({
   type: RECEIVE_BUSINESS,
@@ -24,6 +25,11 @@ export const receiveBusinessErrors = errors => ({
 export const receiveGeocoding = geocoding => ({
   type: RECEIVE_GEOCODING,
   geocoding
+});
+
+export const receiveGeocodingErrors = errors => ({
+  type: RECEIVE_GEOCODING_ERRORS,
+  errors
 });
 
 export const fetchBusiness = businessId => dispatch => (
@@ -49,4 +55,11 @@ export const addBusiness = business => dispatch => (
 
 export const clearErrors = () => dispatch => (
   dispatch(receiveBusinessErrors([]))
+);
+
+export const geocodeLocation = businessLocation => dispatch => (
+  GeocodeAPIUtil.geocode(businessLocation).then(
+    geocoding => (dispatch(receiveGeocoding(geocoding))),
+    errors => dispatch(receiveGeocodingErrors(Object.values(errors.responseJSON)))
+  )
 );
