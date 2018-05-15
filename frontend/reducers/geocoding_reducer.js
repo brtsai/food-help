@@ -17,7 +17,7 @@ const geocodingReducer = (state = {}, action) => {
   switch (action.type) {
     case RECEIVE_GEOCODING:
       console.log('received geocoding');
-      cosnole.log(action.geocoding);
+      console.log(action.geocoding);
       const converted = convertGeocoding(action.geocoding);
       console.log(converted);
       return converted;
