@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store.js';
 
-import { geocodeLocation } from './actions/business_actions';
+import { geocodeLocation } from './actions/geocoding_actions';
 
 document.addEventListener('DOMContentLoaded', () => {
 
