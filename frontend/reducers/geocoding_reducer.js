@@ -6,12 +6,14 @@ const convertGeocoding = geocoding => {
   console.log('attempting conversion');
   console.log(geocoding);
   const formattedAddress = geocoding.formatted_address;
-  console.log(formattedAddress);
-  const address = formattedAddress.split(',')[0];
-  console.log(address);
+  const split = formattedAddress.split(',').map(component => component.trim());
+  console.log(split);
+  const address = split[0];
+  const city = split[1];
 
   return {
     address,
+    city,
     lat: geocoding.geometry.location.lat,
     lng: geocoding.geometry.location.lng
   };
@@ -34,4 +36,3 @@ const geocodingReducer = (state = {}, action) => {
 };
 
 export default geocodingReducer;
-
