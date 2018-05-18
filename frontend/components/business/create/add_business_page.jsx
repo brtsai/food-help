@@ -1,6 +1,8 @@
 import React from 'react';
 
 import AddBusinessFormContainer from './add_business_form_container';
+import AddBusinessMapContainer from './add_business_map_container';
+
 import { clearErrors } from '../../../actions/business_actions';
 import { createErrorBannerContainer } from '../../shared/errors/errors_banner_container';
 
@@ -23,7 +25,7 @@ class AddBusinessPage extends React.Component {
             </section>
 
             <section className="add-business-map-column">
-
+              <AddBusinessMapContainer />
             </section>
           </section>
         </section>
