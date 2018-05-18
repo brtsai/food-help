@@ -23,6 +23,11 @@
   }
 }
 
+.add-business-form-container {
+  display: flex;
+  flex-direction: row;
+}
+
 .add-business-form-column {
   width: 300px;
 }
