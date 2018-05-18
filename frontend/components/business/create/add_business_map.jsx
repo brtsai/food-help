@@ -24,7 +24,7 @@ class AddBusinessMap extends React.Component {
   render () {
     return (
       <div className="add-business-google-map-container">
-        <div className="google-map" ref={ map => this.mapNode = map }></div>
+        <div className="add-business-google-map" ref={ map => this.mapNode = map }></div>
       </div>
 
     );
