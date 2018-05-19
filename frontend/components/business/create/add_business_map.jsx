@@ -45,6 +45,8 @@ class AddBusinessMap extends React.Component {
     
     // save new marker to component state
     this.setState({ marker });
+    
+    this.map.setCenter({ lat, lng });
   }
 
   render () {
