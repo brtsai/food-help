@@ -29,12 +29,17 @@ class AddBusinessForm extends React.Component {
 
   update (type, callback) {
     return e => {
+      const value = e.target.value;
       e.preventDefault();
+      console.log(e.target.value);
       this.setState({
         [type]: e.target.value
       },
       () => {
-        if (callback !== undefined) callback();
+        console.log('in callback');
+        console.log(callback);
+        console.log(e);
+        if (callback !== undefined) callback(value);
       });
     };
   }
@@ -117,7 +122,7 @@ class AddBusinessForm extends React.Component {
         </label>
 
         <label> Location
-          <input type="string" onChange= { this.update('businessLocation') } value={this.state.businessLocation} />
+          <input type="string" onChange= { this.update('businessLocation', debounce(this.props.geocodeLocation, 500)) } value={this.state.businessLocation} />
         </label>
 
         <label> Price
