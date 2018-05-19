@@ -11,8 +11,6 @@ class AddBusinessForm extends React.Component {
       categories: [],
       name: '',
       businessLocation: '',
-      //latitude: 37.7867,
-      //longitude: -122.4
     };
 
     this.submitForm = this.submitForm.bind(this);
@@ -85,34 +83,6 @@ class AddBusinessForm extends React.Component {
       }
     }
   }
-
-/**
-        <label> Neighbourhood
-          <input type="string" onChange= { this.update('neighbourhood') } placeholder="Soma" value={this.state.neighbourhood} />
-        </label>
-        
-        <label> Address
-          <input type="string" onChange= { this.update('address') } placeholder="123 Main Street" value={this.state.address} />
-        </label>
-        
-        <label> City
-          <input type="string" onChange= { this.update('city') } placeholder="San Francisco" value={this.state.city} />
-        </label>
-
-        <label> State
-          <input type="string" onChange= { this.update('state') } placeholder="CA" value={this.state.state} />
-        </label>
-
-        <label> Latitude
-          <input type="number" step="any" onChange= { this.update('latitude') } placeholder="37.3318" value={this.state.latitude} />
-        </label>
-
-        <label> Longitude
-          <input type="number" step="any" onChange= { this.update('longitude') } placeholder="-122.0312" value={this.state.longitude} />
-        </label>
-
-**/
-
 
   render () {
     return (
