@@ -31,6 +31,20 @@ class AddBusinessMap extends React.Component {
     console.log(nextProps);
     console.log(this.state);
     console.log(this.map);
+
+    // remove old marker from map
+    this.state.marker.setMap(null);
+    
+    // create new marker and add it to map
+    const lat = nextProps.lat || 0.0;
+    const lng = nextProps.lng || 0.0;
+    const marker = new google.maps.Marker({
+      position: { lat, lng },
+      map: this.map
+    });
+    
+    // save new marker to component state
+    this.setState({ marker });
   }
 
   render () {
