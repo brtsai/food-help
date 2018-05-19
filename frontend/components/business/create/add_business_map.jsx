@@ -27,6 +27,11 @@ class AddBusinessMap extends React.Component {
     this.setState({ marker });
   }
 
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+    console.log(this.state);
+    console.log(this.map);
+  }
 
   render () {
     return (
