@@ -7,7 +7,7 @@ const convertGeocoding = geocoding => {
   const split = formattedAddress.split(',').map(component => component.trim());
   const address = split[0];
   const city = split[1];
-  const state = split[2].split(' ')[0];
+  const state = split[2] ? split[2].split(' ')[0] : undefined;
 
   return {
     address,
