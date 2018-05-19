@@ -15,7 +15,13 @@ export const receiveGeocodingErrors = errors => ({
 
 export const geocodeLocation = businessLocation => dispatch => (
   GeocodeAPIUtil.geocode(businessLocation).then(
-    geocoding => dispatch(receiveGeocoding(geocoding.results[0])),
+    geocoding => { 
+      if (geocoding.results.length > 0) {
+        return dispatch(receiveGeocoding(geocoding.results[0]));
+      } else {
+        return dispatch(receiveGeocodingErrors(['Location not found']));
+      }
+    },
     errors => dispatch(receiveGeocodingErrors(Object.values(errors.responseJSON)))
   )
 );
