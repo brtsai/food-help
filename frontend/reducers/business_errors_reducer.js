@@ -7,6 +7,7 @@ const businessErrorsReducer = (state = [], action) => {
 
   switch(action.type) {
     case RECEIVE_BUSINESS_ERRORS:
+      console.log(action.errors);
       return action.errors;
 
     case RECEIVE_ROUTE_CHANGE:
