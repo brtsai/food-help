@@ -28,22 +28,13 @@ class AddBusinessForm extends React.Component {
   }
 
   update (type, callback) {
-    if (type === "location") {
-      return e => {
-        e.preventDefault();
-        this.setState({
-          businessLocation: e.target.value
-        },
-        () => {
-          callback();
-        });
-      };
-    }
-    
     return e => {
       e.preventDefault();
       this.setState({
         [type]: e.target.value
+      },
+      () => {
+        if (callback !== undefined) callback();
       });
     };
   }
