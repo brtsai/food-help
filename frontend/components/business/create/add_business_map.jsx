@@ -1,6 +1,10 @@
 import React from 'react';
 
 class AddBusinessMap extends React.Component {
+  constructor (props) {
+    super(props);
+  }
+
   componentDidMount() {
     //const latitude = parseFloat(this.props.business.latitude);
     //const longitude = parseFloat(this.props.business.longitude);
@@ -19,7 +23,10 @@ class AddBusinessMap extends React.Component {
       position: { lat: latitude, lng: longitude },
       map: this.map
     });
+
+    this.setState({ marker });
   }
+
 
   render () {
     return (
