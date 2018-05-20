@@ -1,6 +1,6 @@
 import { merge } from 'lodash';
 
-import { RECEIVE_GEOCODING } from '../actions/geocoding_actions';
+import { RECEIVE_GEOCODING, RECEIVE_GEOCODING_ERRORS } from '../actions/geocoding_actions';
 
 const convertGeocoding = geocoding => {
   const formattedAddress = geocoding.formatted_address;
@@ -25,6 +25,9 @@ const geocodingReducer = (state = {}, action) => {
     case RECEIVE_GEOCODING:
       const converted = convertGeocoding(action.geocoding);
       return converted;
+
+    case RECEIVE_GEOCODING_ERRORS:
+      return {};
 
     default:
       return state;
