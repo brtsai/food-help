@@ -26,6 +26,7 @@
 .add-business-form-container {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .add-business-form-column {
@@ -70,7 +71,6 @@
 .add-business-category-entry {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin: 5px 0px;
 }
 
@@ -101,7 +101,10 @@
 }
 .add-business-form input[type="submit"]:hover {
   background-color: #d90007;
+}
 
+.add-business-suggestion-column {
+  flex: 1;
 }
 
 .add-business-google-map {
