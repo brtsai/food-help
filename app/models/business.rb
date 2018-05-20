@@ -1,6 +1,6 @@
 class Business < ApplicationRecord
   validates :owner_id, presence: true
-  validates :name, :neighbourhood, :address, :city, :state, :latitude, :longitude, presence: true
+  validates :name, :address, :city, :state, :latitude, :longitude, presence: true
   validates :price, presence: true, inclusion: [1, 2, 3, 4, 5]
   
   belongs_to :owner,
