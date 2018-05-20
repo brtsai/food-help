@@ -52,7 +52,6 @@ class Api::SearchController < ApplicationController
 
   def record_business_query_results (term, hash)
     record_business_query_results_by_field("name", term, hash)
-    record_business_query_results_by_field("neighbourhood", term, hash)
     record_business_query_results_by_field("address", term, hash)
   end
 
