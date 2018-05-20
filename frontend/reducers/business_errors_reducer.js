@@ -1,5 +1,6 @@
 import { RECEIVE_BUSINESS_ERRORS } from '../actions/business_actions';
 import { RECEIVE_ROUTE_CHANGE } from '../actions/app_actions';
+import { RECEIVE_GEOCODING_ERRORS } from '../actions/geocoding_actions';
 import { merge } from 'lodash';
 
 const businessErrorsReducer = (state = [], action) => {
@@ -9,6 +10,9 @@ const businessErrorsReducer = (state = [], action) => {
     case RECEIVE_BUSINESS_ERRORS:
       console.log(action.errors);
       return action.errors;
+      
+    case RECEIVE_GEOCODING_ERRORS:
+      return ['Invalid Location'];
 
     case RECEIVE_ROUTE_CHANGE:
       return [];
