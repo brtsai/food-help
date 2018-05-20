@@ -12,7 +12,9 @@ class AddBusinessPage extends React.Component {
 
     return (
       <section className="add-business-page">
-        <BusinessErrorsBannerContainer />
+        <section className="add-business-page-errors">
+          <BusinessErrorsBannerContainer />
+        </section>
         <section className="add-business-page-container">
           <h2 className="add-business-page-title">Add a Business</h2>
           <section className="add-business-form-container">
