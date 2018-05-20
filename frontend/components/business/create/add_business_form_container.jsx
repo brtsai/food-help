@@ -6,7 +6,12 @@ import { addBusiness } from '../../../actions/business_actions'
 import { geocodeLocation } from '../../../actions/geocoding_actions';
 
 const mapStateToProps = state => ({
-  ownerId: Object.keys(state.session)[0]
+  ownerId: Object.keys(state.session)[0],
+  address: state.ui.geocoding.address,
+  city: state.ui.geocoding.city,
+  state: state.ui.geocoding.state,
+  latitude: state.ui.geocoding.lat,
+  longitude: state.ui.geocoding.lng
 });
 
 const mapDispatchToProps = dispatch => ({
