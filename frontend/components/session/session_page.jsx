@@ -81,7 +81,9 @@ class SessionPage extends React.Component {
   render () {
     return (
       <section className="session-page-content">
-        <ErrorsBannerContainer />
+        <section className="session-page-errors">
+          <ErrorsBannerContainer />
+        </section>
         <section className="session-page-main-content">
           <section className="session-form">
             {
