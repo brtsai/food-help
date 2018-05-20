@@ -65,6 +65,9 @@ class SearchResultItem extends React.Component {
               </div>
             </div>
             <div className="search-result-item-location-container">
+              <div className="search-result-item-city-state">
+                { `${this.props.business.city}, ${this.props.business.state}` }
+              </div>
               <div className="search-result-item-address">
                 { this.props.business.address }
               </div>
