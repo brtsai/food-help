@@ -23,6 +23,11 @@
   }
 }
 
+.add-business-page-errors {
+  width: 1030px;
+  margin: 0 auto 0 30px;
+}
+
 .add-business-form-container {
   display: flex;
   flex-direction: row;
