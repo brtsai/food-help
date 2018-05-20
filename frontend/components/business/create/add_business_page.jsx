@@ -20,7 +20,7 @@ class AddBusinessPage extends React.Component {
               <AddBusinessFormContainer />
             </section>
 
-            <section className="add-business-errors-column">
+            <section className="add-business-suggestion-column">
 
             </section>
 
