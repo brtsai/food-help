@@ -17,13 +17,31 @@ class AddBusinessForm extends React.Component {
     this.debouncedGeocode = debounce(this.props.geocodeLocation, 500);
   }
 
+  getBusinessInfo() {
+    return {
+      owner_id: this.state.owner_id,
+      price: this.state.price,
+      name: this.state.name,
+      categories: this.state.categories,
+      address: this.props.address,
+      city: this.props.city,
+      state: this.props.state,
+      latitude: this.props.latitude,
+      longitude: this.props.longitude,
+    };
+  }
+
   submitForm (e) {
     e.preventDefault();
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
-    this.props.addBusiness(this.state).then(success => (this.props.history.push(`/biz/${Object.keys(success.business.business)[0]}`)));
+
+    const businessInfo = this.getBusinessInfo();
+    this.props.addBusiness(businessInfo).then(
+      success => (this.props.history.push(`/biz/${Object.keys(success.business.business)[0]}`))
+    );
   }
 
   update (type, callback) {
