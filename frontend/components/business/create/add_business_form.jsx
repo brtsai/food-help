@@ -111,7 +111,7 @@ class AddBusinessForm extends React.Component {
         </label>
 
         <label> Price
-          <select onChange= { this.update('price') } value={ this.state.price }>
+          <select className="add-business-form-select" onChange= { this.update('price') } value={ this.state.price }>
             <option value="1">$</option>
             <option value="2">$$</option>
             <option value="3">$$$</option>
