@@ -181,6 +181,10 @@
   z-index: 2;
 }
 
+.business-reviews-errors {
+  margin-bottom: 15px;
+}
+
 .business-reviews-section {
   background: white;
   min-width: 1000px;
