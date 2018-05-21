@@ -112,6 +112,12 @@
   flex: 1;
 }
 
+.add-business-google-map-container {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
 .add-business-google-map {
   width: 300px;
   height: 300px;
