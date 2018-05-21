@@ -9,8 +9,8 @@ class AddBusinessMap extends React.Component {
     //const latitude = parseFloat(this.props.business.latitude);
     //const longitude = parseFloat(this.props.business.longitude);
     // set the map to show SF
-    const latitude = 37.3318;
-    const longitude = -122.0312;
+    const latitude = 37.7866839;
+    const longitude = -122.3998832;
     const mapOptions = {
       center: { lat: latitude, lng: longitude }, // this is SF
       zoom: 13
