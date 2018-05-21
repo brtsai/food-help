@@ -43,6 +43,10 @@
   font-size: 15px;
 }
 
+.search-result-item-business-overview-container {
+  width: 200px;
+}
+
 .search-result-item-business-overview-container h4 {
   font-size: 18px;
 }
