@@ -99,7 +99,9 @@ class Reviews extends React.Component {
     const ReviewErrorsBannerContainer = createErrorBannerContainer('review', clearErrors);
     return (
       <div className="business-reviews-content">
-        <ReviewErrorsBannerContainer />
+        <div className="business-reviews-errors">
+          <ReviewErrorsBannerContainer />
+        </div>
         <div className="business-reviews-current-user-review-slot" >
           {
             this.userHasReview() ?
