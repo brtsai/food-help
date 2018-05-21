@@ -107,7 +107,7 @@ class AddBusinessForm extends React.Component {
         </label>
 
         <label> Location
-          <input type="string" onChange= { this.update('businessLocation', this.debouncedGeocode) } value={this.state.businessLocation} />
+          <input type="string" onChange= { this.update('businessLocation', this.debouncedGeocode) } placeholder="123 Main St, San Francisco, CA, 94103" value={this.state.businessLocation} />
         </label>
 
         <label> Price
